@@ -1,10 +1,58 @@
 body {
+    height: 100vh;
     margin: 0;
     background-image: url(../img/index/backgroundIndex.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.iconBurger {
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    margin: 1rem;
+    color: rgb(237, 237, 237);
+}
+
+.iconCross {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-self: end;
+    margin: 1rem;
+    transform: rotate(45deg);
+    color: rgb(237, 237, 237);
+}
+
+.menu {
+    width: 10rem;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    gap: 1rem;
+    z-index: 1;
+    background-color: rgba(66, 65, 65, 0.454);
+}
+
+.menu.on {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .navBar {
     width: 100%;
@@ -15,6 +63,12 @@ body {
     backdrop-filter: blur(3px);
     box-shadow: 0 0 41px -18px black;
     background-color: rgba(66, 65, 65, 0.454);
+}
+
+.logoLinkNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navLogo {
@@ -35,7 +89,7 @@ a {
 }
 
 .navLink {
-    width: 23rem;
+    width: 18rem;
     display: flex;
     justify-content: space-between;
     margin-left: 2rem;
@@ -111,7 +165,7 @@ a {
 
 .navCart {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -173,16 +227,26 @@ a {
     transition: .5s;
 }
 
+.search {
+    width: 10rem;
+    height: 1.5rem;
+    display: flex;
+    margin-right: 1rem;
+    border-radius: 8px;
+    background-color: rgba(152, 149, 149, 0.454);
+}
+
 .searchBar {
-    width: 8rem;
-    height: 1rem;
+    width: 5rem;
+    height: 1.6rem;
     display: block;
     margin-right: 1rem;
     border-radius: 7px;
     border: none;
     outline: none;
     border-radius: 2rem;
-    background-color: rgba(152, 149, 149, 0.454);
+    color: rgb(215, 211, 211);
+    background-color: transparent;
 }
 
 .icon {
@@ -261,6 +325,11 @@ main {
     width: 0%;
 }
 
+/* .infoBar {
+    width: 100%;
+    height: 8rem;
+    background-color: aqua;
+} */
 
 
 
@@ -320,6 +389,14 @@ main {
         display: none;
     }
 
+    .search {
+        width: 4rem;
+        margin: 0;
+        display: flex;
+        justify-content: end;
+        background-color: transparent;
+    }
+
     .middle {
         font-size: medium;
     }
@@ -332,13 +409,28 @@ main {
         height: 4rem;
     }
 
+    .logoLinkNav {
+        flex: 1;
+    }
+
+    .navLogo {
+        width: 7.5rem;
+        justify-content: start;
+    }
+
     .navLink {
-        width: 15rem;
+        flex: 1;
         margin: 0;
         font-size: x-small;
+        justify-content: center;
+    }
+
+    .navLink a {
+        margin: 0 .5rem;
     }
 
     .navCart {
+        width: 7.5rem;
         display: flex;
         justify-content: center;
     }
@@ -349,6 +441,16 @@ main {
 
     .middle {
         font-size: small;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .navBar {
+        display: none;
+    }
+
+    .iconBurger {
+        display: flex;
     }
 }
 
