@@ -34,11 +34,21 @@ input {
 }
 
 .inputBox {
-    width: 12rem;
+    width: 15rem;
     height: 2.2rem;
     margin: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(225, 225, 225);
+}
+
+.inputBoxR {
+    width: 15rem;
+    height: 2.2rem;
+    margin: .5rem;
+    display: flex;
+    justify-content: start;
     align-items: center;
     background-color: rgb(225, 225, 225);
 }
@@ -51,6 +61,7 @@ input {
 
 .iconBox {
     width: 2rem;
+    margin: .2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,8 +87,7 @@ input {
 }
 
 .saveForgot {
-    width: 12rem;
-    height: 2.2rem;
+    width: 15rem;
     margin: .5rem;
     display: flex;
     flex-direction: column;
@@ -103,8 +113,7 @@ input {
 .btnLog {
     width: 8rem;
     height: 2.5rem;
-    margin-top: 3rem;
-    z-index: 1;
+    margin-top: 2rem;
     border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
@@ -117,8 +126,6 @@ input {
 .btnLog:hover {
     width: 8rem;
     height: 2.5rem;
-    margin-bottom: 1rem;
-    z-index: 1;
     border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
@@ -156,21 +163,94 @@ input {
     color: rgb(246, 244, 244);
 }
 
+.civility {
+    width: 15rem;
+    height: 2rem;
+    display: flex;
+    justify-content: start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(246, 244, 244);
+}
+
 .nameBox {
     display: flex;
     justify-content: center;
 }
 
 .inputName {
-    width: 4.5rem;
+    width: 7rem;
     height: 2rem;
     margin: .5rem;
     border: none;
 }
 
-.inputRegister {
-    margin: 1rem;
+.bdayDate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(246, 244, 244);
 }
+
+.inputBday {
+    width: 15rem;
+    height: 2rem;
+    margin: .5rem;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(87, 87, 87);
+}
+
+.inputRegister {
+    width: 10rem;
+    height: 2rem;
+    margin: .5rem;
+    border: none;
+}
+
+.iconPhone {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: rgb(112, 111, 111);
+}
+
+
+.btnRegister {
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: rgb(228, 226, 226);
+    border: 1px solid #111;
+    background: black;
+    cursor: pointer;
+}
+
+.btnRegister:hover {
+    width: 8rem;
+    height: 2.5rem;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    border: 1px solid #111;
+    background: rgb(225, 225, 225);
+    cursor: pointer;
+    transition: .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -187,7 +267,7 @@ input {
     .log {
         width: 40rem;
         max-width: 90%;
-        height: 18rem;
+        height: 23rem;
         max-height: 40%;
         margin: 1rem;
     }
@@ -195,7 +275,7 @@ input {
     .register {
         width: 40rem;
         max-width: 90%;
-        height: 18rem;
+        height: 27rem;
         max-height: 40%;
         margin: 1rem;
     }
