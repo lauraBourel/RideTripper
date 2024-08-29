@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/account.css">
-    <title>Mon compte</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Ride Tripper</title>
 </head>
+
 <body>
     <nav>
         <div id="menuBurger" class="menuBurger">
@@ -21,7 +23,7 @@
         <div class="navBar">
             <div class="logoLinkNav">
                 <div class="navLogo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img class="logo" src="assets/img/index/logoWhite.png" alt="logoridetripper">
                     </a>
                 </div>
@@ -36,11 +38,16 @@
                     <ion-icon class="icon" name="search-outline"></ion-icon>
                     <input class="searchBar" placeholder="Recherche... "></input>
                 </div>
-                <a href="login.html">
+                <a href="account.php">
                     <ion-icon class="icon" name="person-outline"></ion-icon>
                 </a>
                 <ion-icon id=cartIcon class="icon cartIcon" name="cart-outline"></ion-icon>
             </div>
+        </div>
+        <div id="popUpCart" class="popUpCart">
+            <ion-icon class="iconCartPopUp" name="cart-outline"></ion-icon>
+            <p class="cartMessage">Votre panier est vide.</p>
+            <button id="btnClosePopUp">RETOUR A LA BOUTIQUE</button>
         </div>
         <div id="equipmentMenu">
             <a class="blackLink" href="">Vestes textile moto</a>
@@ -63,12 +70,20 @@
             <a class="blackLink" href="">Sweat-shirts</a>
             <a class="blackLink" href="">Bonnets</a>
         </div>
-        <div id="popUpCart" class="popUpCart">
-            <ion-icon class="iconCartPopUp" name="cart-outline"></ion-icon>
-            <p class="cartMessage">Votre panier est vide.</p>
-            <button id="btnClosePopUp">RETOUR A LA BOUTIQUE</button>
-        </div>
     </nav>
+    <main>
+        <div class="middle">
+            <p>VESTE MOTO FEMME EN CUIR</p>
+            <p>HOMOLOGUEE AA - RISE</p>
+            <button class="glowOnHover">VOIR</button>
+        </div>
+    </main>
+    <div class="infoBar"></div>
+
+
+
+
+
 
 
 
@@ -85,4 +100,5 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

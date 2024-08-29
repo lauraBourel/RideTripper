@@ -7,7 +7,7 @@ class Database
     {
         try {
 
-            $this->db = new PDO('mysql:host=172.18.0.2;dbname=tp;charset=utf8', 'root', 'pw');
+            $this->db = new PDO('mysql:host=172.18.0.2;dbname=rtcb_rideTripper;charset=utf8', 'root', 'pw');
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }

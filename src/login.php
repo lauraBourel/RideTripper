@@ -1,3 +1,4 @@
+<?php require_once 'controllers/loginCtrl.php'  ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,6 +11,7 @@
 </head>
 
 <body>
+
     <nav>
         <div id="menuBurger" class="menuBurger">
             <div class="menu" id="menu">
@@ -23,7 +25,7 @@
         <div class="navBar">
             <div class="logoLinkNav">
                 <div class="navLogo">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img class="logo" src="assets/img/index/logoWhite.png" alt="logoridetripper">
                     </a>
                 </div>
@@ -38,7 +40,7 @@
                     <ion-icon class="icon" name="search-outline"></ion-icon>
                     <input class="searchBar" placeholder="Recherche... "></input>
                 </div>
-                <a href="login.html">
+                <a href="login.php">
                     <ion-icon class="icon" name="person-outline"></ion-icon>
                 </a>
                 <ion-icon id=cartIcon class="icon cartIcon" name="cart-outline"></ion-icon>
@@ -72,19 +74,19 @@
         </div>
     </nav>
     <main>
-        <form class="log">
+        <form method="POST" class="log">
             <p class="txtLog">Se connecter :</p>
             <div class="inputBox">
                 <div class="iconBox">
                     <ion-icon class="iconName" name="person-outline"></ion-icon>
                 </div>
-                <input type="text" name="name" id="name" placeholder="Email" />
+                <input type="text" name="login_email" id="name" placeholder="Email" />
             </div>
             <div class="inputBox">
                 <div class="iconBox">
                     <ion-icon class="iconLock" name="lock-closed-outline"></ion-icon>
                 </div>
-                <input type="text" name="password" id="password" placeholder="Mot de passe" />
+                <input type="password" name="login_password" id="password" placeholder="Mot de passe" />
             </div>
             <div class="saveForgot">
                 <div class="rememberMe">
@@ -93,52 +95,83 @@
                 </div>
                 <a class="forgotPassword" href="">Mot de passe oublié ?</a>
             </div>
-            <button class="btnLog">CONNEXION</button>
+            <button class="btnLog" name="type" value="login">CONNEXION</button>
         </form>
 
-        <form class="register">
+        <form method="POST" class="register">
             <p class="txtRegister">S'enregistrer :</p>
 
             <div class="civility">
                 <label for="mister">
-                    <input type="radio" id="mister" name="title" value="M." />
+                    <input <?= !empty($_POST['civility']) ? $_POST['civility'] : '' ?> type="radio" id="mister" name="civility" value="0" />
                     M
                 </label>
+
                 <label for="miss">
-                    <input type="radio" id="miss" name="title" value="Mme." />
+                    <input <?= !empty($_POST['civility']) ? $_POST['civility'] : '' ?> type="radio" id="miss" name="civility" value="1" />
                     Mme
                 </label>
+                <?php if (!empty($error) && !empty($error['civility'])) { ?>
+                    <small style="color: red;"><?= $error['civility'] ?></small>
+                <?php } ?>
             </div>
 
             <div class="nameBox">
-                <input class="inputName" type="text" name="name" id="lastname" placeholder="Nom" />
-                <input class="inputName" type="text" name="name" id="firstname" placeholder="Prénom" />
+
+                <input <?= !empty($_POST['lastname']) ? $_POST['lastname'] : '' ?> class="inputName" type="text" name="lastname" id="lastname" placeholder="Nom" required />
+                <?php if (!empty($error) && !empty($error['lastname'])) { ?>
+                    <small style="color: red;"><?= $error['lastname'] ?></small>
+                <?php } ?>
+
+
+                <input <?= !empty($_POST['firstname']) ? $_POST['firstname'] : '' ?> class="inputName" type="text" name="firstname" id="firstname"placeholder="Prénom" required>
+                <?php if (!empty($error) && !empty($error['firstname'])) { ?>
+                <small style="color: red;"><?= $error['firstname'] ?></small>
+                <?php } ?>
+
             </div>
-            <label class="bdayDate"> Date de naissance : 
-                <input class="inputBday" type="date" name="bday" />
+            <label class="bdayDate"> Date de naissance :
+            <input <?= !empty($_POST['birthday']) ? $_POST['birthday'] : '' ?> class="inputBday" type="date" name="birthday" id="bday"required />
+                <?php if (!empty($error) && !empty($error['birthday'])) { ?>
+                    <small style="color: red;"><?= $error['birthday'] ?></small>
+                <?php } ?> 
             </label>
             <div class="inputBoxR">
                 <div class="iconBox">
                     <ion-icon class="iconName" name="person-outline"></ion-icon>
                 </div>
-                <input class="inputRegister" type="text" name="mail" id="name" placeholder="Email" />
+
+
+
+                <input value="<?= !empty($_POST['email']) ? $_POST['email'] : '' ?>"   class="inputRegister" type="email" name="email" id="email" placeholder="Email" required>
+                <?php if (!empty($error) && !empty($error['email'])) { ?>
+                <small style="color: red;"><?= $error['email'] ?></small>
+                <?php } ?>
+
+
+
             </div>
             <div class="inputBoxR">
                 <div class="iconBox">
                     <ion-icon class="iconLock" name="lock-closed-outline"></ion-icon>
                 </div>
-                <input class="inputRegister" type="text" name="password" id="password" placeholder="Mot de passe" />
+                <input class=inputRegister type="password" name="password" id="password" placeholder="Mot de passe" required>
+                <?php if (!empty($error) && !empty($error['password'])) { ?>
+                <small style="color: red;"><?= $error['password'] ?></small>
+                <?php } ?>
             </div>
             <div class="inputBoxR">
                 <div class="iconBox">
                     <ion-icon class="iconPhone" name="call-outline"></ion-icon>
                 </div>
-                <input class="inputRegister" type="text" name="mobile" id="mobile" placeholder="Mobile" />
+                <input <?= !empty($_POST['phone_number']) ? $_POST['phone_number'] : '' ?> class="inputRegister" type="text" name="phone_number" id="phone" placeholder="Mobile" required />
+                <?php if (!empty($error) && !empty($error['phone_number'])) { ?>
+                    <small style="color: red;"><?= $error['phone_number'] ?></small>
+                <?php } ?>
             </div>
-            <button class="btnRegister">ENREGISTRER</button>
+            <button class="btnRegister" name="type" value="create">ENREGISTRER</button>
         </form>
     </main>
-
 
 
 
