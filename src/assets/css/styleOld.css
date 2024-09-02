@@ -1,0 +1,384 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-image: url(../img/index/backgroundIndex.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* menu burger  */
+.iconBurger {
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    margin: 1rem;
+    color: rgb(237, 237, 237);
+}
+
+.iconCross {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-self: end;
+    margin: 1rem;
+    transform: rotate(45deg);
+    color: rgb(237, 237, 237);
+}
+
+.menu {
+    width: 10rem;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    gap: 1rem;
+    z-index: 1;
+    background-color: rgba(66, 65, 65, 0.454);
+}
+
+.menu.on {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* navbar */
+.navBar {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 41px -18px black;
+    background-color: rgba(66, 65, 65, 0.454);
+}
+
+.logoLinkNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navLink {
+    width: 18rem;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+    position: relative;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.linkUnderline {
+    text-decoration: none;
+    color: rgb(237, 237, 237);
+}
+
+.linkUnderline:hover {
+    text-decoration: underline;
+}
+
+.blackLink {
+    color: black;
+}
+
+.blackLink:hover {
+    font-weight: bold;
+}
+
+#equipmentMenu {
+    width: 9rem;
+    position: absolute;
+    top: 55px;
+    left: 110px;
+    display: none;
+    padding: .5rem;
+    z-index: 1;
+    gap: 1rem;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: #d9d9d9ce;
+}
+
+#equipmentMenu.on {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#clothesNav {
+    position: relative;
+}
+
+#clothesMenu {
+    width: 9rem;
+    position: absolute;
+    top: 55px;
+    left: 270px;
+    display: none;
+    padding: .5rem;
+    z-index: 1;
+    gap: 1rem;
+    text-decoration: none;
+    font-size: small;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: #d9d9d9ce;
+}
+
+#clothesMenu.on {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popUpCart {
+    width: 13rem;
+    height: 13rem;
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #d9d9d9ce;
+}
+
+.popUpCart.on {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.iconCartPopUp {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 5px;
+    z-index: 0;
+    color: rgba(110, 110, 110, 0.619);
+}
+
+.cartMessage {
+    z-index: 1;
+}
+
+#btnClosePopUp {
+    width: 8rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(228, 226, 226);
+    border: 1px solid #111;
+    background: black;
+    cursor: pointer;
+}
+
+#btnClosePopUp:hover {
+    width: 8rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    z-index: 1;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    border: 1px solid #111;
+    background: rgba(110, 110, 110, 0.231);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.search {
+    width: 10rem;
+    height: 1.5rem;
+    display: flex;
+    margin-right: 1rem;
+    border-radius: 8px;
+    background-color: rgba(152, 149, 149, 0.454);
+}
+
+.searchBar {
+    width: 5rem;
+    height: 1.6rem;
+    display: block;
+    margin-right: 1rem;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    color: rgb(215, 211, 211);
+    background-color: transparent;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: rgb(215, 211, 211);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .searchBar {
+        display: none;
+    }
+
+    .search {
+        width: 4rem;
+        margin: 0;
+        display: flex;
+        justify-content: end;
+        background-color: transparent;
+    }
+
+    .middle {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        margin: 0;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .logoLinkNav {
+        flex: 1;
+    }
+
+    .navLogo {
+        width: 7.5rem;
+        justify-content: start;
+    }
+
+    .navLink {
+        flex: 1;
+        margin: 0;
+        font-size: x-small;
+        justify-content: center;
+    }
+
+    .navLink a {
+        margin: 0 .5rem;
+    }
+
+    .navCart {
+        width: 7.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon {
+        margin-right: .3rem;
+    }
+
+    .middle {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .navBar {
+        display: none;
+    }
+
+    .iconBurger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navLink {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

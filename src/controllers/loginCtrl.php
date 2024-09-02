@@ -112,49 +112,35 @@ if (!empty($_POST) && !empty($_POST['type'])) {
                 $error['server'] = 'Enregistrement échoué, réessayer plus tard';
             }
         }
-    }
+    } elseif ($_POST['type'] == 'login') {
 
 
-    //connexion
-
-    // if (!empty($_POST['login_email'])) {
-    //     $email = $_POST['login_email'];
-    // } else {
-    //     $error['login_email'] = 'email obligatoire';
-    // }
-
-    // if (!empty($_POST['login_password'])) {
-    //     $password = $_POST['login_password'];
-    // } else {
-    //     $error['login_password'] = 'Mot de passe obligatoire';
-    // }
-
-    // if (empty($error)) {
-    //     $user = $user->getByEmail($_POST['email']);
-    //     $user->email = htmlspecialchars($_POST['email']);
-    //     if ($user) {
-    //         if (password_verify($password, $user->password)) {
-    //             $_SESSION['id'] = $user->id;
-    //             header('Location: index.php');
-    //             exit();
-    //         } else {
-    //             $error['login_password'] = 'Mot de passe incorrect';
-    //         }
-    //     } else {
-    //         $error['global'] = 'Utilisateur non trouvé';
-    //     }
-    // }
-    
 
 
-    //         if ($user) {
-    //             if (password_verify($password, $user->password)) {
-    //                 $_SESSION['id'] = $user->id;
-    //                 header('Location: index.php');
-    //             } else {
-    //                 $error['login_password'] = 'Mot de passe incorrecte';
-    //             }
-    //         } else {
-    //             $error['global'] = 'Inscription reussie mais connexion echouer';
-    //         }
+        if (!empty($_POST['login_email'])) {
+            $user->email = $_POST['login_email'];
+        } else {
+            $error['login_email'] = 'email obligatoire';
         }
+
+        if (!empty($_POST['login_password'])) {
+            $user->password = $_POST['login_password'];
+        } else {
+            $error['login_password'] = 'Mot de passe obligatoire';
+        }
+        if (empty($error)) {
+            $data = $user->getByEmail();
+            if ($data) {
+                if (password_verify($user->password, $data->password)) {
+                    $_SESSION['id'] = $data->id;
+                    header('Location: index.php');
+                    exit();
+                } else {
+                    $error['login_password'] = 'Mot de passe incorrecte';
+                }
+            } else {
+                $error['global'] = 'inexistant';
+            }
+        }
+    }
+}
