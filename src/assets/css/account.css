@@ -37,11 +37,59 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
     background-color: rgba(6, 6, 6, 0.36);
+}
+
+.accountLogo {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px){
+    .accountMenu {
+        width: 8rem;
+        height: calc(100% - 3rem);
+    }
+    .descriptionAccount {
+        width: calc(100% - 8rem);
+    }
 }
 
 @media screen and (max-width: 550px) {
     nav {
         box-shadow: 0 0 41px 0 rgba(0, 0, 0, 0.517);
+    }
+    .descriptionAccount {
+        width: 100%;
+        height: auto;
+    }
+    .accountMenu {
+        width: 100%;
+        height: .5rem;
+        position: absolute;
+        bottom: 0;
+        flex-direction: inherit;
+        justify-content: space-around;
+        align-items: end;
+    }
+    .accountLogo{
+        width:1.5rem ;
+        height:1.5rem;
+        display: block;
+    }
+    .linkAccount{
+        display: none;
     }
 }
