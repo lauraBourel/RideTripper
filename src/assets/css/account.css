@@ -57,11 +57,12 @@ nav {
 
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
     .accountMenu {
         width: 8rem;
         height: calc(100% - 3rem);
     }
+
     .descriptionAccount {
         width: calc(100% - 8rem);
     }
@@ -71,25 +72,32 @@ nav {
     nav {
         box-shadow: 0 0 41px 0 rgba(0, 0, 0, 0.517);
     }
+
     .descriptionAccount {
         width: 100%;
         height: auto;
     }
+
     .accountMenu {
         width: 100%;
-        height: .5rem;
+        height: 3rem;
+        padding: 0;
         position: absolute;
         bottom: 0;
         flex-direction: inherit;
         justify-content: space-around;
-        align-items: end;
+        gap: unset;
     }
-    .accountLogo{
-        width:1.5rem ;
-        height:1.5rem;
+
+    .accountLogo {
+        width: 1rem;
+        height: 1rem;
         display: block;
+        position: absolute;
+        top: 30%;
     }
-    .linkAccount{
+
+    .linkAccount {
         display: none;
     }
 }

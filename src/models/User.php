@@ -28,9 +28,19 @@ class User extends Database
         return $queryExecute->execute();
     }
 
+    public function getById()
+    {
+        $query = "SELECT * FROM `rtcb_users` WHERE `id` = :id";
 
-    public function getByEmail(){
-        $query = "SELECT * FROM `rtcb_users` WHERE `email` = :email"; 
+        $queryExecute = $this->db->prepare($query);
+        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_STR);
+        $queryExecute->execute();
+        return $queryExecute->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function getByEmail()
+    {
+        $query = "SELECT * FROM `rtcb_users` WHERE `email` = :email";
 
         $queryExecute = $this->db->prepare($query);
         $queryExecute->bindValue(':email', $this->email, PDO::PARAM_STR);

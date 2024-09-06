@@ -1,5 +1,4 @@
 <?php require_once 'controllers/accountCtrl.php' ?>
-<?php require_once './ui/navbar.php' ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,44 +11,50 @@
 </head>
 
 <body>
+    <?php require_once './ui/navbar.php' ?>
     <main class="midBox">
         <ul class="accountMenu">
             <li>
-                <a class="linkAccount" href="#" title="Tableau de bord">Tableau de bord</a>
                 <a href="#" title="Tableau de bord">
+                    <span class="linkAccount">Tableau de bord</span>
                     <ion-icon class="accountLogo" name="analytics-outline">
                     </ion-icon>
                 </a>
             </li>
             <li>
-                <a class="linkAccount" href="#" title="Commandes">Commandes</a>
                 <a href="#" title="Commandes">
+                    <span class="linkAccount">Commandes</span>
                     <ion-icon class="accountLogo" name="file-tray-full-outline"></ion-icon>
                 </a>
             </li>
             <li>
-                <a class="linkAccount" href="#" title="Adresses">Adresses</a>
-                <ion-icon class="accountLogo" name="location-outline"></ion-icon>
+                <a href="#" title="Adresses">
+                    <span class="linkAccount">Adresses</span>
+                    <ion-icon class="accountLogo" name="location-outline"></ion-icon>
+                </a>
+                
             </li>
             <li>
-                <a class="linkAccount" href="#" title="Details du compte">Détails du compte</a>
-                <ion-icon class="accountLogo" name="settings-outline"></ion-icon>
+                <a href="#" title="Details du compte">
+                    <span class="linkAccount">Détails du compte</span>
+                    <ion-icon class="accountLogo" name="settings-outline"></ion-icon>
+                </a>
             </li>
             <li>
-                <a class="linkAccount" href="logout.php" title="Deconnexion">Deconnexion</a>
-                <ion-icon class="accountLogo" name="power-outline"></ion-icon>
+                <a href="logout.php" title="Deconnexion">
+                    <span class="linkAccount">Deconnexion</span>
+                    <ion-icon class="accountLogo" name="power-outline"></ion-icon>
+                </a>
             </li>
         </ul>
         <div class="descriptionAccount">
-            
-            <h1>Bonjour, 
-                <!-- <?= $_SESSION['firstname'] ?> -->
-            </h1>
+
+            <h1>Bonjour <?= $dataUser->firstname ?>,</h1>
             <p> À partir du tableau de bord de votre compte,
-            vous pouvez visualiser vos commandes récetentes,<br>
-            gérer vos adresses de livraison et de facturation
-            ainsi que changer votre mot de passe
-            et les détails de votre compte.</p>
+                vous pouvez visualiser vos commandes récetentes,<br>
+                gérer vos adresses de livraison et de facturation
+                ainsi que changer votre mot de passe
+                et les détails de votre compte.</p>
         </div>
     </main>
 
