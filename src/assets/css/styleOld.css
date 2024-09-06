@@ -310,7 +310,7 @@ a {
     }
 
     .search {
-        width: 4rem;
+        width: 4rem; 
         margin: 0;
         display: flex;
         justify-content: end;

@@ -1,6 +1,10 @@
 body {
     background-image: url(../img/index/backgroundIndex.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
 
 main {
     height: calc(100vh - 3.5rem);

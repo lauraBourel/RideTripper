@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(184, 96, 169);
+}
+
+.scroller {
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    scrollbar-color: rgb(237, 237, 58) rgb(230, 20, 163);
+    scrollbar-width: thin;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h1 {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main .itemsBox {
+    width: 45rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .itemCard {
+    min-width: 13rem;
+    height: 17rem;
+    margin: 1rem;
+    background-color: blueviolet;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    main .itemCard {
+        min-width: 13rem;
+        height: 17rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+}
