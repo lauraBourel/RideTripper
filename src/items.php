@@ -14,17 +14,27 @@
     <main>
         <h1>Equipement Moto</h1>
         <div class="itemsBox">
-            <div class="itemCard"></div>
-            <div class="itemCard"></div>
-            <div class="itemCard"></div>
-            <div class="itemCard"></div>
-            <div class="itemCard"></div>
-            <div class="itemCard"></div>
+            <div class="itemCard">
+                <p class="itemCardDescription">Gants moto homologués 1KP Jody Sunrise 119.00€</p>
+            </div>
+            <div class="itemCard">
+                <p class="itemCardDescription"></p>
+            </div>
+            <div class="itemCard">
+                <p class="itemCardDescription"></p>
+            </div>
+            <div class="itemCard">
+                <p class="itemCardDescription"></p>
+            </div>
+            <div class="itemCard">
+                <p class="itemCardDescription"></p>
+            </div>
+            <div class="itemCard">
+                <p class="itemCardDescription"></p>
+            </div>
         </div>
 
     </main>
-
-
 
 
 
