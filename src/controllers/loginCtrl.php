@@ -7,6 +7,7 @@ if (!empty($_POST) && !empty($_POST['type'])) {
     $user = new User();
     $error = [];
 
+    // Inscription
     if ($_POST['type'] == 'create') {
 
         if (isset($_POST['civility'])) {
@@ -116,7 +117,7 @@ if (!empty($_POST) && !empty($_POST['type'])) {
 
 
 
-
+        // connexion 
         if (!empty($_POST['login_email'])) {
             $user->email = $_POST['login_email'];
         } else {

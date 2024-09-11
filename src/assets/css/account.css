@@ -100,4 +100,8 @@ nav {
     .linkAccount {
         display: none;
     }
+
+    .midBox {
+        justify-content: center;
+    }
 }

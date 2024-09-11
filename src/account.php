@@ -15,7 +15,7 @@
     <main class="midBox">
         <ul class="accountMenu">
             <li>
-                <a href="#" title="Tableau de bord">
+                <a href="account.php" title="Tableau de bord">
                     <span class="linkAccount">Tableau de bord</span>
                     <ion-icon class="accountLogo" name="analytics-outline">
                     </ion-icon>
@@ -35,7 +35,7 @@
                 
             </li>
             <li>
-                <a href="#" title="Details du compte">
+                <a href="detail.php" title="Details du compte">
                     <span class="linkAccount">Détails du compte</span>
                     <ion-icon class="accountLogo" name="settings-outline"></ion-icon>
                 </a>
@@ -48,7 +48,6 @@
             </li>
         </ul>
         <div class="descriptionAccount">
-
             <h1>Bonjour <?= $dataUser->firstname ?>,</h1>
             <p> À partir du tableau de bord de votre compte,
                 vous pouvez visualiser vos commandes récetentes,<br>
@@ -62,7 +61,6 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/account.js"></script>
 </body>
 
 </html>

@@ -48,6 +48,19 @@ class User extends Database
         return $queryExecute->fetch(PDO::FETCH_OBJ);
     }
 
+    public function update()
+    {
+        $query = "UPDATE `rtcb_users` SET `firstname` = :firstname,`lastname`= :lastname,`email`= :email,`birthday`= :birthday,`phone_number`= :phone_number WHERE `id` = :id";
+
+        $queryExecute = $this->db->prepare($query);
+        $queryExecute->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
+        $queryExecute->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
+        $queryExecute->bindValue(':email', $this->email, PDO::PARAM_STR);
+        $queryExecute->bindValue(':birthday', $this->birthday, PDO::PARAM_STR);
+        $queryExecute->bindValue(':phone_number', $this->phone, PDO::PARAM_STR);
+        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_STR);
+        return $queryExecute->execute(); 
+    }
 
     public function delete()
     {
