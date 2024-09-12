@@ -70,26 +70,24 @@
                 <?php } ?>
 
             </div>
-            <label class="bdayDate"> Date de naissance :
-                <input <?= !empty($_POST['birthday']) ? $_POST['birthday'] : '' ?> class="inputBday" type="date" name="birthday" id="bday" required />
-                <?php if (!empty($error) && !empty($error['birthday'])) { ?>
-                    <small style="color: red;"><?= $error['birthday'] ?></small>
-                <?php } ?>
-            </label>
+            
+
+            <div class="inputBoxR label">
+                    <label for="birthday"> Date de naissance :</label>
+                    <input value="<?= !empty($_POST['birthday']) ? $_POST['birthday'] : '' ?>" class="inputRegister" type="date" name="birthday" id="birthday" placeholder="Prenom" required>
+                    <?php if (!empty($error) && !empty($error['birthday'])) { ?>
+                        <small style="color: red;"><?= $error['birthday'] ?></small>
+                    <?php } ?>
+                </div>
+
             <div class="inputBoxR">
                 <div class="iconBox">
                     <ion-icon class="iconName" name="person-outline"></ion-icon>
                 </div>
-
-
-
                 <input value="<?= !empty($_POST['email']) ? $_POST['email'] : '' ?>" class="inputRegister" type="email" name="email" id="email" placeholder="Email" required>
                 <?php if (!empty($error) && !empty($error['email'])) { ?>
                     <small style="color: red;"><?= $error['email'] ?></small>
                 <?php } ?>
-
-
-
             </div>
             <div class="inputBoxR">
                 <div class="iconBox">

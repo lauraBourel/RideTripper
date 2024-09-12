@@ -49,46 +49,51 @@
             </li>
         </ul>
 
-        <form method="POST" class="detailAccount">
-                <p class="txtRegister">Modifier :</p>
-                <div class="nameBox">
-                    <input value="<?= $lastname ?>" class="inputDetail" type="text" name="lastname" id="lastname" placeholder="Nom" required />
+        <div class="detailAccount">
+            <form method="POST">
+                <h2 class="titleUpdate">Modification de vos informations personnelles :</h2>
+                <div class="inputBoxR">
+                    <input value="<?= $lastname ?>" type="text" name="lastname" id="lastname" placeholder="Nom" required>
                     <?php if (!empty($error) && !empty($error['lastname'])) { ?>
                         <small style="color: red;"><?= $error['lastname'] ?></small>
                     <?php } ?>
-
-                    <input value="<?= $firstname ?>" class="inputDetail" type="text" name="firstname" id="firstname" placeholder="Prénom" required>
+                </div>
+                <div class="inputBoxR">
+                    <input value="<?= $firstname ?>" type="text" name="firstname" id="firstname" placeholder="Prenom" required>
                     <?php if (!empty($error) && !empty($error['firstname'])) { ?>
                         <small style="color: red;"><?= $error['firstname'] ?></small>
                     <?php } ?>
-
                 </div>
-                <label class="bdayDate"> Date de naissance :
-                    <input value="<?= $birthday ?>" class="inputBday" type="date" name="birthday" id="bday" required />
+                <div class="inputBoxR label">
+                    <label for="birthday"> Date de naissance :</label>
+                    <input value="<?= $birthday ?>" type="date" name="birthday" id="birthday" placeholder="Prenom" required>
                     <?php if (!empty($error) && !empty($error['birthday'])) { ?>
                         <small style="color: red;"><?= $error['birthday'] ?></small>
                     <?php } ?>
-                </label>
+                </div>
+
+
                 <div class="inputBoxR">
                     <div class="iconBox">
                         <ion-icon class="iconName" name="person-outline"></ion-icon>
                     </div>
-                    <input value="<?= $email ?>" class="inputDetail" type="email" name="email" id="email" placeholder="Email" required>
+                    <input value="<?= $email ?>" type="email" name="email" id="email" placeholder="Email" required>
                     <?php if (!empty($error) && !empty($error['email'])) { ?>
                         <small style="color: red;"><?= $error['email'] ?></small>
                     <?php } ?>
                 </div>
                 <div class="inputBoxR">
                     <div class="iconBox">
-                        <ion-icon class="iconPhone" name="call-outline"></ion-icon>
+                        <ion-icon class="iconName" name="call-outline"></ion-icon>
                     </div>
-                    <input value="<?= $phone_number ?>" class="inputDetail" type="text" name="phone_number" id="phone" placeholder="Mobile" required />
+                    <input value="<?= $phone_number ?>" type="phone_number" name="phone_number" id="phone_number" placeholder="Telephone" required>
                     <?php if (!empty($error) && !empty($error['phone_number'])) { ?>
                         <small style="color: red;"><?= $error['phone_number'] ?></small>
                     <?php } ?>
                 </div>
-                <button class="btnRegister" name="type" value="create">MODIFIER</button>
-        </form>
+                <button class="custom" name="type" value="create">ENREGISTRER MODIFICATION</button>
+            </form>
+        </div>
     </main>
 
 

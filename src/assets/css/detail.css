@@ -1,10 +1,34 @@
 .detailAccount {
-    width: 100vw;
-    height: 20rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(66, 65, 65, 0.6);
+    overflow-y: scroll;
+    scrollbar-color: rgba(87, 87, 87, 0) #c2d2e400;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 41px -18px black;
+    background-color: rgba(0, 0, 0, 0.454);
+}
+
+
+.titleUpdate {
+    margin-top: 1rem;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+.nameBox {
+    display: flex;
 }
 
 .inputDetail {
@@ -12,4 +36,36 @@
     height: 2rem;
     margin: .5rem;
     border: none;
+    color: rgb(87, 87, 87);
+    background-color: rgba(255, 255, 255, 0.788);
+}
+
+.inputBday {
+    width: 15rem;
+    height: 2rem;
+    margin: .5rem;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(87, 87, 87);
+    background-color: rgba(255, 255, 255, 0.788);
+}
+
+.inputBoxDetail {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: rgb(87, 87, 87);
+    background-color: rgba(255, 255, 255, 0.788);
+}
+
+.iconInner {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: black;
+}
+
+.custom {
+    margin: 1rem;
+    margin-bottom: 0;
 }
