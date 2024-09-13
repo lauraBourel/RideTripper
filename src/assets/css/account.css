@@ -25,6 +25,7 @@ nav {
     align-items: center;
     gap: 3rem;
     list-style-type: none;
+    text-align: center;
     color: var(--text-color);
     background-color: var(--bg);
     backdrop-filter: blur(5px);

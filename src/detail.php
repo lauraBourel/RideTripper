@@ -47,6 +47,12 @@
                     <ion-icon class="accountLogo" name="power-outline"></ion-icon>
                 </a>
             </li>
+            <li>
+                <a href="delet.php">
+                <span class="linkAccount">Suppression du compte</span>
+                <ion-icon class="accountLogo" name="trash-outline"></ion-icon>
+                </a>
+            </li>
         </ul>
 
         <div class="detailAccount">
@@ -97,9 +103,11 @@
     </main>
 
 
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/detail.js"></script>
 </body>
 
 </html>
