@@ -58,19 +58,19 @@
         <div class="detailAccount">
             <form method="POST">
                 <h2 class="titleUpdate">Modification de vos informations personnelles :</h2>
-                <div class="inputBoxR">
+                <div class="inputBox">
                     <input value="<?= $lastname ?>" type="text" name="lastname" id="lastname" placeholder="Nom" required>
                     <?php if (!empty($error) && !empty($error['lastname'])) { ?>
                         <small style="color: red;"><?= $error['lastname'] ?></small>
                     <?php } ?>
                 </div>
-                <div class="inputBoxR">
+                <div class="inputBox">
                     <input value="<?= $firstname ?>" type="text" name="firstname" id="firstname" placeholder="Prenom" required>
                     <?php if (!empty($error) && !empty($error['firstname'])) { ?>
                         <small style="color: red;"><?= $error['firstname'] ?></small>
                     <?php } ?>
                 </div>
-                <div class="inputBoxR label">
+                <div class="inputBox label">
                     <label for="birthday"> Date de naissance :</label>
                     <input value="<?= $birthday ?>" type="date" name="birthday" id="birthday" placeholder="Prenom" required>
                     <?php if (!empty($error) && !empty($error['birthday'])) { ?>
@@ -79,7 +79,7 @@
                 </div>
 
 
-                <div class="inputBoxR">
+                <div class="inputBox">
                     <div class="iconBox">
                         <ion-icon class="iconName" name="person-outline"></ion-icon>
                     </div>
@@ -88,7 +88,7 @@
                         <small style="color: red;"><?= $error['email'] ?></small>
                     <?php } ?>
                 </div>
-                <div class="inputBoxR">
+                <div class="inputBox">
                     <div class="iconBox">
                         <ion-icon class="iconName" name="call-outline"></ion-icon>
                     </div>

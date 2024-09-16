@@ -103,12 +103,3 @@ $firstname = !empty($_POST['firstname']) ? $_POST['firstname'] : $userData->firs
 $birthday = !empty($_POST['birthday']) ? $_POST['birthday'] : $userData->birthday;
 $email = !empty($_POST['email']) ? $_POST['email'] : $userData->email;
 $phone_number = !empty($_POST['phone_number']) ? $_POST['phone_number'] : $userData->phone_number;
-
-
-
-// $deletUser = $user->delete();
-// if ($deletUser) {
-//     echo "Compte supprimé avec succès.";
-// } else {
-//     echo "Erreur lors de la suppression du compte : ";
-// }

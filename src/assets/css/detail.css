@@ -71,4 +71,10 @@ form {
 }
 
 
+@media screen and (max-width: 550px) {
+    .detailAccount {
+        height: 90%;
+    }
+}
+
 

@@ -30,6 +30,7 @@ if (!empty($_POST) && !empty($_POST['type'])) {
         } else {
             $error['lastname'] = 'Nom obligatoire';
         }
+
         if (!empty($_POST['firstname'])) {
             if (strlen($_POST['firstname']) >= 3 && strlen($_POST['firstname']) <= 50) {
                 $user->firstname = htmlspecialchars($_POST['firstname']);

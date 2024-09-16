@@ -21,12 +21,18 @@
                     <ion-icon class="iconName" name="person-outline"></ion-icon>
                 </div>
                 <input type="text" name="login_email" id="name" placeholder="Email" />
+                <?php if (!empty($error) && !empty($error['login_email'])) { ?>
+                    <small style="color: red;"><?= $error['login_email'] ?></small>
+                <?php } ?>
             </div>
             <div class="inputBox">
                 <div class="iconBox">
                     <ion-icon class="iconLock" name="lock-closed-outline"></ion-icon>
                 </div>
                 <input type="password" name="login_password" id="password" placeholder="Mot de passe" />
+                <?php if (!empty($error) && !empty($error['login_password'])) { ?>
+                    <small style="color: red;"><?= $error['login_password'] ?></small>
+                <?php } ?>
             </div>
             <div class="saveForgot">
                 <div class="rememberMe">
@@ -72,7 +78,7 @@
             </div>
             
 
-            <div class="inputBoxR label">
+            <div class="inputBox label">
                     <label for="birthday"> Date de naissance :</label>
                     <input value="<?= !empty($_POST['birthday']) ? $_POST['birthday'] : '' ?>" class="inputRegister" type="date" name="birthday" id="birthday" placeholder="Prenom" required>
                     <?php if (!empty($error) && !empty($error['birthday'])) { ?>
@@ -80,7 +86,7 @@
                     <?php } ?>
                 </div>
 
-            <div class="inputBoxR">
+            <div class="inputBox">
                 <div class="iconBox">
                     <ion-icon class="iconName" name="person-outline"></ion-icon>
                 </div>
@@ -89,7 +95,7 @@
                     <small style="color: red;"><?= $error['email'] ?></small>
                 <?php } ?>
             </div>
-            <div class="inputBoxR">
+            <div class="inputBox">
                 <div class="iconBox">
                     <ion-icon class="iconLock" name="lock-closed-outline"></ion-icon>
                 </div>
@@ -98,7 +104,7 @@
                     <small style="color: red;"><?= $error['password'] ?></small>
                 <?php } ?>
             </div>
-            <div class="inputBoxR">
+            <div class="inputBox">
                 <div class="iconBox">
                     <ion-icon class="iconPhone" name="call-outline"></ion-icon>
                 </div>

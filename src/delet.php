@@ -1,14 +1,23 @@
-<?php 
-session_start();
-session_destroy();
+<?php require_once 'controllers/deletCtrl.php'  ?>
+<!DOCTYPE html>
+<html lang="fr">
 
-$deletUser = $user->delete();
-if ($deletUser) {
-    echo "Compte supprimé avec succès.";
-} else {
-    echo "Erreur lors de la suppression du compte : ";
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
 
-header('Location: index.php');
+<body>
 
-?>
+    <h1><?= $message ?></h1>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.location.href = "/";
+            }, 10000);
+        });
+    </script>
+</body>
+
+</html>

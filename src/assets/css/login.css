@@ -43,7 +43,7 @@ input {
     background-color: rgb(225, 225, 225);
 }
 
-.inputBoxR {
+.inputBox {
     width: 15rem;
     height: 2.2rem;
     margin: .5rem;
@@ -96,6 +96,8 @@ input {
 }
 
 .rememberMe {
+    display: flex;
+    align-items: center;
     font-size: 0.7rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
@@ -170,6 +172,12 @@ input {
     justify-content: start;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(246, 244, 244);
+}
+
+.civilityValue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nameBox {

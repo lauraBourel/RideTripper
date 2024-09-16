@@ -79,7 +79,7 @@ button.custom:hover::after {
     width: 0%;
 }
 
-.inputBoxR {
+.inputBox {
     width: 15rem;
     margin: .5rem;
     position: relative;
@@ -89,11 +89,11 @@ button.custom:hover::after {
     background-color: rgb(225, 225, 225);
 }
 
-.inputBoxR.label {
+.inputBox.label {
     margin-top: 1.5rem;
 }
 
-.inputBoxR label {
+.inputBox label {
     width: 100%;
     height: 1rem;
     position: absolute;
