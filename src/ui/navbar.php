@@ -8,7 +8,7 @@
         </a>
         <div>
             <div class="links">
-                <a href="">EQUIPEMENT MOTO</a>
+                <a href="items.php">EQUIPEMENT MOTO</a>
                 <div class="link-menu">
                     <a class="blackLink" href="">Vestes textile moto</a>
                     <a class="blackLink" href="">Vestes cuir moto</a>

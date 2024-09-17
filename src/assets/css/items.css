@@ -2,14 +2,6 @@ body {
     background-color: rgb(184, 96, 169);
 }
 
-.scroller {
-    width: 300px;
-    height: 100px;
-    overflow-y: scroll;
-    scrollbar-color: rgb(237, 237, 58) rgb(230, 20, 163);
-    scrollbar-width: thin;
-}
-
 main {
     width: 100vw;
     display: flex;

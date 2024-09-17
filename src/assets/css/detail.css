@@ -77,4 +77,11 @@ form {
     }
 }
 
-
+@media screen and (max-width: 400px) {
+    .inputBox {
+        width: 12rem;
+    }
+    .titleUpdate {
+        font-size: 15px;
+    }
+}

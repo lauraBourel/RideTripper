@@ -1,3 +1,4 @@
+<?php require_once 'controllers/itemsCtrl.php'  ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,7 +10,7 @@
     <title>Equipement Moto</title>
 </head>
 
-<body class="scroller">
+<body>
     <?php require './ui/navbar.php' ?>
     <main>
         <h1>Equipement Moto</h1>
@@ -33,7 +34,40 @@
                 <p class="itemCardDescription"></p>
             </div>
         </div>
+        <form method="POST" class="register">
+            <p class="txtRegister">Enregistrer un article :</p>
+            <div class="nameBox">
+                <input <?= !empty($_POST['name']) ? $_POST['name'] : '' ?> class="inputName" type="text" name="name" id="name" placeholder="Nom article" required />
+                <?php if (!empty($error) && !empty($error['name'])) { ?>
+                    <small style="color: red;"><?= $error['name'] ?></small>
+                <?php } ?>
 
+                <div class="nameBox">
+                <input <?= !empty($_POST['description']) ? $_POST['description'] : '' ?> class="inputName" type="text" name="description" id="description" placeholder="Description article" required />
+                <?php if (!empty($error) && !empty($error['description'])) { ?>
+                    <small style="color: red;"><?= $error['description'] ?></small>
+                <?php } ?>
+
+                <div class="nameBox">
+                <input <?= !empty($_POST['price']) ? $_POST['price'] : '' ?> class="inputName" type="text" name="price" id="price" placeholder="Prix article" required />
+                <?php if (!empty($error) && !empty($error['price'])) { ?>
+                    <small style="color: red;"><?= $error['price'] ?></small>
+                <?php } ?>
+
+                <div class="nameBox">
+                <input <?= !empty($_POST['quantity']) ? $_POST['quantity'] : '' ?> class="inputName" type="text" name="quantity" id="quantity" placeholder="Quantité article" required />
+                <?php if (!empty($error) && !empty($error['quantity'])) { ?>
+                    <small style="color: red;"><?= $error['quantity'] ?></small>
+                <?php } ?>
+
+                <div class="nameBox">
+                <input <?= !empty($_POST['id_category']) ? $_POST['id_category'] : '' ?> class="inputName" type="text" name="id_category" id="id_category" placeholder="Categorie article" required />
+                <?php if (!empty($error) && !empty($error['id_category'])) { ?>
+                    <small style="color: red;"><?= $error['id_category'] ?></small>
+                <?php } ?>
+            
+            <button class="btnRegister" name="type" value="create">ENREGISTRER ARTICLE</button>
+        </form>
     </main>
 
 
