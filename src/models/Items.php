@@ -24,6 +24,15 @@ class Item extends Database
         return $queryExecute->execute();
     }
 
+    public function getById()
+    {
+        $query = "SELECT * FROM `rtcb_items` WHERE `id` = :id";
+
+        $queryExecute = $this->db->prepare($query);
+        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $queryExecute->execute();
+        return $queryExecute->fetch(PDO::FETCH_OBJ);
+    }
 
 
 

@@ -6,6 +6,10 @@ if (!empty($_POST) && !empty($_POST['type'])) {
     $item = new Item();
     $error = [];
 
+    $item->id = $_SESSION['id'];
+    $dataItem = $item->getById();
+
+
     if ($_POST['type'] == 'create') {
 
         if (!empty($_POST['name'])) {
@@ -49,7 +53,6 @@ if (!empty($_POST) && !empty($_POST['type'])) {
         } else {
             $error['id_category'] = 'Id categorie obligatoire';
         }
-
 
 
         if (empty($error)) {

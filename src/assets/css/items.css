@@ -15,6 +15,7 @@ main h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 main .itemsBox {
     width: 45rem;
     display: flex;
@@ -22,25 +23,48 @@ main .itemsBox {
 }
 
 main .itemCard {
-    min-width: 13rem;
+    width: 13rem;
     height: 17rem;
     margin: 1rem;
+    transition: box-shadow .3s;
     display: flex;
-    align-items: end;
-    background-color: blueviolet;
+    flex-direction: column;
+    justify-content: end;
+    background-color: white;
 }
+
+main .itemCard:hover {
+    box-shadow: 0 0 23px rgba(26, 25, 25, 0.65);
+}
+
+main .itemImg {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
 
 main .itemCardDescription {
     width: 13rem;
     height: 3rem;
     margin: 0;
-    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(200, 200, 170);
 }
 
 
+form .register {
+    margin: 1rem;
+    background-color: blueviolet;
+}
 
-
-
+form .nameBox {
+    margin: 1rem;
+}
 
 
 
@@ -55,6 +79,7 @@ main .itemCardDescription {
         width: 40rem;
         justify-content: center;
     }
+
     main .itemCard {
         min-width: 13rem;
         height: 17rem;
@@ -66,10 +91,12 @@ main .itemCardDescription {
         width: 20rem;
         justify-content: center;
     }
+
     main .itemCard {
         min-width: 6rem;
         height: 17rem;
     }
+
     main .itemCardDescription {
         height: 2rem;
     }
