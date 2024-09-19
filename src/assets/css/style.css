@@ -81,6 +81,7 @@ button.custom:hover::after {
 
 .inputBox {
     width: 15rem;
+    height: 2.2rem;
     margin: .5rem;
     position: relative;
     display: flex;
@@ -119,7 +120,7 @@ button.custom:hover::after {
 }
 
 input {
-    height: 2.2rem;
+    /* height: 2.2rem; */
     border: none;
     flex: 1;
     outline: none;

@@ -59,7 +59,7 @@ class User extends Database
         $queryExecute->bindValue(':birthday', $this->birthday, PDO::PARAM_STR);
         $queryExecute->bindValue(':phone_number', $this->phone, PDO::PARAM_STR);
         $queryExecute->bindValue(':id', $this->id, PDO::PARAM_STR);
-        return $queryExecute->execute(); 
+        return $queryExecute->execute();
     }
 
     public function delete()

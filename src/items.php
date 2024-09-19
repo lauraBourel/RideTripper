@@ -13,30 +13,20 @@
 <body>
     <?php require './ui/navbar.php' ?>
     <main>
-            <h1>Equipement Moto</h1>
+        <h1>Equipement Moto</h1>
         <div class="itemsBox">
-            <div class="itemCard">
-                <img class="itemImg" src="\assets\img\gants.jpg" alt="Gants moto">
-                <div class="itemCardDescription">
-                    <!-- <?= $dataItem->description ?> -->
-                    <div class="price">549.00€</div>
-                </div>
-            </div>
-            <div class="itemCard">
-                <p class="itemCardDescription"></p>
-            </div>
-            <div class="itemCard">
-                <p class="itemCardDescription"></p>
-            </div>
-            <div class="itemCard">
-                <p class="itemCardDescription"></p>
-            </div>
-            <div class="itemCard">
-                <p class="itemCardDescription"></p>
-            </div>
-            <div class="itemCard">
-                <p class="itemCardDescription"></p>
-            </div>
+            <?php if ($dataItem) { ?>
+                <?php foreach ($dataItem as $item) { ?>
+                    <div class="itemCard">
+                        <img class="itemImg" src="\assets\img\gants.jpg" alt="Gants moto">
+                        <div class="itemCardDescription"><?= $item->name ?>
+                            <div class="price"><?= $item->price ?>€</div>
+                        </div>
+                    </div>
+                <?php } ?>
+            <?php } else { ?>
+                <h2>Aucun article dans cette categorie</h2>
+            <?php } ?>
         </div>
         <form method="POST" class="register">
             <p class="txtRegister">Enregistrer un article :</p>
@@ -69,9 +59,9 @@
             </div>
 
             <div class="nameBox">
-                <input <?= !empty($_POST['id_category']) ? $_POST['id_category'] : '' ?> class="inputName" type="text" name="id_category" id="id_category" placeholder="Categorie article" required />
-                <?php if (!empty($error) && !empty($error['id_category'])) { ?>
-                    <small style="color: red;"><?= $error['id_category'] ?></small>
+                <input <?= !empty($_POST['id_subcategory']) ? $_POST['id_subcategory'] : '' ?> class="inputName" type="text" name="id_subcategory" id="id_subcategory" placeholder="Categorie article" required />
+                <?php if (!empty($error) && !empty($error['id_subcategory'])) { ?>
+                    <small style="color: red;"><?= $error['id_subcategory'] ?></small>
                 <?php } ?>
             </div>
 

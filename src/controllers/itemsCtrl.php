@@ -1,14 +1,14 @@
 <?php
 session_start();
 
+if (empty($_GET) || empty($_GET['type']) || empty($_GET['id'])) header('Location: index.php');
+if ($_GET['type'] != 'cat' && $_GET['type'] != 'subcat')  header('Location: index.php');
+
+require 'models/Items.php';
+$item = new Item();
+$error = [];
+
 if (!empty($_POST) && !empty($_POST['type'])) {
-    require 'models/Items.php';
-    $item = new Item();
-    $error = [];
-
-    $item->id = $_SESSION['id'];
-    $dataItem = $item->getById();
-
 
     if ($_POST['type'] == 'create') {
 
@@ -48,10 +48,10 @@ if (!empty($_POST) && !empty($_POST['type'])) {
             $error['quantity'] = 'Quantité produit obligatoire';
         }
 
-        if (!empty($_POST['id_category'])) {
-            $item->id_category = htmlspecialchars($_POST['id_category']);
+        if (!empty($_POST['id_subcategory'])) {
+            $item->id_subcategory = htmlspecialchars($_POST['id_subcategory']);
         } else {
-            $error['id_category'] = 'Id categorie obligatoire';
+            $error['id_subcategory'] = 'Id categorie obligatoire';
         }
 
 
@@ -62,3 +62,15 @@ if (!empty($_POST) && !empty($_POST['type'])) {
         }
     }
 }
+
+if ($_GET['type'] == 'cat') {
+    $item->id_category = $_GET['id'];
+    $dataItem = $item->getByCat();
+} else {
+    $item->id_subcategory = $_GET['id'];
+    $dataItem = $item->getBySubCat();
+}
+
+// require 'models/Category.php';
+// $category = new Category();
+// $dataCategory = $category->getAll();

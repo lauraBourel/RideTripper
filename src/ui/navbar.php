@@ -1,3 +1,4 @@
+<?php require __DIR__ . '/../controllers/navCtrl.php' ?>
 <nav id="menu">
     <button id="iconBurger">
         <div></div>
@@ -7,7 +8,21 @@
             <img src="assets/img/index/logoWhiteNew.png" alt="logoridetripper">
         </a>
         <div>
-            <div class="links">
+            <?php foreach ($categories as $category) { ?>
+                <div class="links">
+                    <a href="items.php?type=cat&id=<?= $category->id ?>"><?= strtoupper($category->name) ?></a>
+                    <div class="link-menu">
+                        <?php foreach ($sortedSubcategories[$category->id] as $subcategory) { ?>
+                            <a class="blackLink" href="items.php?type=subcat&id=
+                            <?= $subcategory->id ?>">
+                                <?= $subcategory->name ?> 
+                            </a>
+                        <?php } ?>
+                        <ion-icon class="link-menu-close" name="arrow-back-outline"></ion-icon>
+                    </div>
+                </div>
+            <?php } ?>
+            <!-- <div class="links">
                 <a href="items.php">EQUIPEMENT MOTO</a>
                 <div class="link-menu">
                     <a class="blackLink" href="">Vestes textile moto</a>
@@ -35,7 +50,7 @@
                     <a class="blackLink" href="">Bonnets</a>
                     <ion-icon class="link-menu-close" name="arrow-back-outline"></ion-icon>
                 </div>
-            </div>
+            </div> -->
             <a href="">ROADTRIP</a>
         </div>
     </div>

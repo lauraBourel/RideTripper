@@ -20,6 +20,7 @@ main .itemsBox {
     width: 45rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 main .itemCard {

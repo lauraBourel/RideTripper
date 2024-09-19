@@ -48,7 +48,7 @@
             </li>
         </ul>
         <div class="descriptionAccount">
-            <h1>Bonjour <?= $dataUser->firstname ?>,</h1>
+            <h1>Bonjour <?=  $dataUser->firstname ?>,</h1>
             <p> À partir du tableau de bord de votre compte,
                 vous pouvez visualiser vos commandes récetentes,<br>
                 gérer vos adresses de livraison et de facturation

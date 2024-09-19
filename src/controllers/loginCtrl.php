@@ -106,6 +106,7 @@ if (!empty($_POST) && !empty($_POST['type'])) {
                 $checkUser = $user->getByEmail();
                 if ($checkUser) {
                     $_SESSION['id'] = $checkUser->id;
+                    $_SESSION['role'] = $checkUser->id_role;
                     header('Location: index.php');
                 } else {
                     $error['server'] = 'enregistrement reussie mais echec de la connexion';
