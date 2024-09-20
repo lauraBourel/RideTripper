@@ -1,8 +1,8 @@
 <?php
-require __DIR__ . '/../models/Category.php';
+require_once __DIR__ . '/../models/Category.php';
 $category = new Category();
 
-require __DIR__ . '/../models/Subcategory.php';
+require_once __DIR__ . '/../models/Subcategory.php';
 $subcategory = new Subcategory();
 
 $categories = $category->getAll();

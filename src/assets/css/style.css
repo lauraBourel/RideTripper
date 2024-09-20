@@ -80,7 +80,7 @@ button.custom:hover::after {
 }
 
 .inputBox {
-    width: 15rem;
+    width: 15rem; 
     height: 2.2rem;
     margin: .5rem;
     position: relative;

@@ -13,7 +13,38 @@
 <body>
     <?php require './ui/navbar.php' ?>
     <main>
-        <h1>Equipement Moto</h1>
+        <h1><?= $cat->name ?></h1>
+
+        <?php foreach ($categories as $category) { ?>
+            <div class="links">
+                <a href="items.php?type=cat&id=<?= $category->id ?>"><?= strtoupper($category->name) ?></a>
+                <div class="link-menu">
+                    <?php foreach ($sortedSubcategories[$category->id] as $subcategory) { ?>
+                        <a class="blackLink" href="items.php?type=subcat&id=<?= $subcategory->id ?>">
+                            <?= $subcategory->name ?>
+                        </a>
+                    <?php } ?>
+                    <ion-icon class="link-menu-close" name="arrow-back-outline"></ion-icon>
+                </div>
+            </div>
+        <?php } ?>
+
+
+        <!-- <?php if ($catData) { ?> -->
+        <!-- <?php foreach ($catData as $cat) { ?> -->
+        <!-- <div class="itemCard">
+                        <img class="itemImg" src="\assets\img\gants.jpg" alt="Gants moto">
+                        <div class="itemCardDescription"><?= $cat->name ?> -->
+        <!-- </div>
+                    </div> -->
+        <!-- <?php } ?>
+            <?php } else { ?>
+                <h2>Aucune categorie trouvée</h2>
+            <?php } ?> -->
+
+
+
+
         <div class="itemsBox">
             <?php if ($dataItem) { ?>
                 <?php foreach ($dataItem as $item) { ?>

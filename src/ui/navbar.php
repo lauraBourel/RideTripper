@@ -13,9 +13,8 @@
                     <a href="items.php?type=cat&id=<?= $category->id ?>"><?= strtoupper($category->name) ?></a>
                     <div class="link-menu">
                         <?php foreach ($sortedSubcategories[$category->id] as $subcategory) { ?>
-                            <a class="blackLink" href="items.php?type=subcat&id=
-                            <?= $subcategory->id ?>">
-                                <?= $subcategory->name ?> 
+                            <a class="blackLink" href="items.php?type=subcat&id=<?= $subcategory->id ?>">
+                                <?= $subcategory->name ?>
                             </a>
                         <?php } ?>
                         <ion-icon class="link-menu-close" name="arrow-back-outline"></ion-icon>

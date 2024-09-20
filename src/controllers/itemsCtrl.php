@@ -4,7 +4,7 @@ session_start();
 if (empty($_GET) || empty($_GET['type']) || empty($_GET['id'])) header('Location: index.php');
 if ($_GET['type'] != 'cat' && $_GET['type'] != 'subcat')  header('Location: index.php');
 
-require 'models/Items.php';
+require_once 'models/Items.php';
 $item = new Item();
 $error = [];
 
@@ -63,14 +63,30 @@ if (!empty($_POST) && !empty($_POST['type'])) {
     }
 }
 
+
+
+
+
+
+
 if ($_GET['type'] == 'cat') {
     $item->id_category = $_GET['id'];
     $dataItem = $item->getByCat();
+
+    require_once __DIR__ . '/../models/Category.php';
+    $category = new Category();
+
+    $category->id = $_GET['id'];
+    $cat = $category->getCategoryById();
 } else {
     $item->id_subcategory = $_GET['id'];
     $dataItem = $item->getBySubCat();
+
+    require_once __DIR__ . '/../models/Subcategory.php';
+    $subcategory = new Subcategory();
+
+    $subcategory->id = $_GET['id'];
+    $cat  = $subcategory->getSubCategoryById();
 }
 
-// require 'models/Category.php';
-// $category = new Category();
-// $dataCategory = $category->getAll();
+
