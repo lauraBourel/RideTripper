@@ -45,8 +45,8 @@
         </form>
 
         <form method="POST" class="register">
+            <div class="registerInfo">
             <p class="txtRegister">S'enregistrer :</p>
-
             <div class="civility">
                 <label for="mister">
                     <input <?= !empty($_POST['civility']) ? $_POST['civility'] : '' ?> type="radio" id="mister" name="civility" value="0" />
@@ -114,6 +114,7 @@
                 <?php } ?>
             </div>
             <button class="btnRegister" name="type" value="create">ENREGISTRER</button>
+            </div>
         </form>
     </main>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

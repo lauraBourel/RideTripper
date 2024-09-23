@@ -9,6 +9,7 @@ iconBurger.addEventListener('click', function () {
 // nav menu
 
 const links = document.getElementsByClassName('links');
+const linksCat = document.getElementsByClassName('links-cat');
 const linkMenu = document.getElementsByClassName('link-menu');
 const linkMenuClose = document.getElementsByClassName('link-menu-close');
 
@@ -18,18 +19,10 @@ const closeMenu = () => {
     };
 }
 
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener('mouseover', () => {
+for (let i = 0; i < linksCat.length; i++) {
+    linksCat[i].addEventListener('mouseover', () => {
         closeMenu();
         links[i].classList.add('open');
-    });
-
-    links[i].addEventListener('click', (e) => {
-        if (window.innerWidth <= 800) {
-            e.preventDefault();
-            closeMenu();
-            links[i].classList.add('open');
-        }
     });
 
     linkMenuClose[i].addEventListener('click', (e) => {
@@ -37,6 +30,17 @@ for (let i = 0; i < links.length; i++) {
         closeMenu();
     });
 }
+
+for (let i = 0; i < linksCat.length; i++) {
+    linksCat[i].addEventListener('click', (e) => {
+        if (window.innerWidth <= 800) {
+            e.preventDefault();
+            closeMenu();
+            links[i].classList.add('open');
+        }
+    });
+}
+
 menu.addEventListener('mouseleave', closeMenu);
 
 // nav search box

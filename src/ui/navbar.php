@@ -10,10 +10,10 @@
         <div>
             <?php foreach ($categories as $category) { ?>
                 <div class="links">
-                    <a href="items.php?type=cat&id=<?= $category->id ?>"><?= strtoupper($category->name) ?></a>
+                    <a class="links-cat" href="items.php?type=cat&id=<?= $category->id ?>"><?= strtoupper($category->name) ?></a>
                     <div class="link-menu">
                         <?php foreach ($sortedSubcategories[$category->id] as $subcategory) { ?>
-                            <a class="blackLink" href="items.php?type=subcat&id=<?= $subcategory->id ?>">
+                            <a id="cat<?= $subcategory->id ?>" class="blackLink" href="items.php?type=subcat&id=<?= $subcategory->id ?>">
                                 <?= $subcategory->name ?>
                             </a>
                         <?php } ?>
@@ -21,35 +21,6 @@
                     </div>
                 </div>
             <?php } ?>
-            <!-- <div class="links">
-                <a href="items.php">EQUIPEMENT MOTO</a>
-                <div class="link-menu">
-                    <a class="blackLink" href="">Vestes textile moto</a>
-                    <a class="blackLink" href="">Vestes cuir moto</a>
-                    <a class="blackLink" href="">Gants moto</a>
-                    <a class="blackLink" href="">Pantalons moto</a>
-                    <a class="blackLink" href="">Airbag moto</a>
-                    <a class="blackLink" href="">Protections</a>
-                    <a class="blackLink" href="">Combinaisons moto</a>
-                    <a class="blackLink" href="">Cagoules de moto</a>
-                    <ion-icon class="link-menu-close" name="arrow-back-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="links">
-                <a href="">VETEMENTS</a>
-                <div class="link-menu">
-                    <a class="blackLink" href="">Vestes</a>
-                    <a class="blackLink" href="">Jerseys</a>
-                    <a class="blackLink" href="">T-shirts</a>
-                    <a class="blackLink" href="">Accessoires</a>
-                    <a class="blackLink" href="">Chaussettes</a>
-                    <a class="blackLink" href="">Cagoules</a>
-                    <a class="blackLink" href="">Sous-vêtements</a>
-                    <a class="blackLink" href="">Sweat-shirts</a>
-                    <a class="blackLink" href="">Bonnets</a>
-                    <ion-icon class="link-menu-close" name="arrow-back-outline"></ion-icon>
-                </div>
-            </div> -->
             <a href="">ROADTRIP</a>
         </div>
     </div>
@@ -70,3 +41,13 @@
         <button id="cart-close" class="custom">RETOUR A LA BOUTIQUE</button>
     </div>
 </nav>
+
+<script>
+    const test = document.getElementById('cat1');
+    console.log(test);
+
+    test.addEventListener('click', () => {
+        console.log('test');
+
+    });
+</script>
