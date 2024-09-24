@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" title="Adresses">
+                <a href="adress.php" title="Adresses">
                     <span class="linkAccount">Adresses</span>
                     <ion-icon class="accountLogo" name="location-outline"></ion-icon>
                 </a>

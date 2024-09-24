@@ -3,7 +3,7 @@ body {
 }
 
 main {
-    height: calc(100vh - 4.5rem);
+    /* height: calc(100vh - 4.5rem); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +12,8 @@ main {
 .register {
     width: 80%;
     max-width: 80%;
-    height: 26rem;
-    max-height: 90%;
+    /* height: 26rem;
+    max-height: 90%; */
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -38,6 +38,7 @@ main {
 }
 
 .inputName {
+    width: 20rem;
     height: 2rem;
     margin: .5rem;
     border: none;
@@ -50,13 +51,15 @@ main {
 
 textarea {
     border: none;
-    color: rgb(87, 87, 87);
+    color: rgb(87, 87, 87); 
     background-color: rgb(225, 225, 225);
 }
+
 
 .btnRegister {
     width: 8rem;
     height: 2.5rem;
+    margin: 1rem;
     border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;

@@ -1,4 +1,4 @@
-<?php require_once 'controllers/accountCtrl.php' ?>
+<?php require_once 'controllers/adressCtrl.php'  ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/account.css">
-    <title>Mon compte</title>
+    <link rel="stylesheet" href="assets/css/adress.css">
+    <title>Adresse de livraison</title>
 </head>
 
 <body>
@@ -32,7 +32,6 @@
                     <span class="linkAccount">Adresses</span>
                     <ion-icon class="accountLogo" name="location-outline"></ion-icon>
                 </a>
-                
             </li>
             <li>
                 <a href="detail.php" title="Details du compte">
@@ -47,15 +46,69 @@
                 </a>
             </li>
         </ul>
-        <div class="descriptionAccount">
-            <h1>Bonjour <?=  $dataUser->firstname ?>,</h1>
-            <p> À partir du tableau de bord de votre compte,
-                vous pouvez visualiser vos commandes récetentes,<br>
-                gérer vos adresses de livraison et de facturation
-                ainsi que changer votre mot de passe
-                et les détails de votre compte.</p>
-        </div>
+
+
+        <form method="POST">
+            <p>Enregistrer votre adresse de livraison :</p>
+            <div>
+                <input <?= !empty($_POST['street']) ? $_POST['street'] : '' ?> type="text" name="street" id="street" placeholder="Rue" required />
+                <?php if (!empty($error) && !empty($error['street'])) { ?>
+                    <small style="color: red;"><?= $error['street'] ?></small>
+                <?php } ?>
+
+
+                <input <?= !empty($_POST['number']) ? $_POST['number'] : '' ?> type="text" name="number" id="number" placeholder="Numero de rue" required>
+                <?php if (!empty($error) && !empty($error['number'])) { ?>
+                    <small style="color: red;"><?= $error['number'] ?></small>
+                <?php } ?>
+
+            </div>
+            
+            <div>
+                <input value="<?= !empty($_POST['city']) ? $_POST['city'] : '' ?>" type="text" name="city" id="city" placeholder="Code postal et Ville" required>
+                <?php if (!empty($error) && !empty($error['city'])) { ?>
+                    <small style="color: red;"><?= $error['city'] ?></small>
+                <?php } ?>
+            </div>
+    
+            <div>
+                <input <?= !empty($_POST['country']) ? $_POST['country'] : '' ?> type="text" name="country" id="country" placeholder="Pays" required />
+                <?php if (!empty($error) && !empty($error['country'])) { ?>
+                    <small style="color: red;"><?= $error['country'] ?></small>
+                <?php } ?>
+            </div>
+            <button class="custom" name="type" value="create">ENREGISTRER MON ADRESSE</button>
+            </div>
+        </form>
+
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
