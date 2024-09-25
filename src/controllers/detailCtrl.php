@@ -10,7 +10,7 @@ $user->id = $_SESSION['id'];
 if (!empty($_POST)) {
     $error = [];
 
-    $dataUser = $user->getById();
+    // $dataUser = $user->getById();
 
     if (!empty($_POST['lastname'])) {
         if (strlen($_POST['lastname']) >= 3 && strlen($_POST['lastname']) <= 50) {

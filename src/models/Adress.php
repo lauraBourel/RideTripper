@@ -10,17 +10,28 @@ class Adress extends Database
     public $country;
     public $id_users;
 
+
     public function register()
     {
-        $query = "INSERT INTO `rtcb_adress_users`(`id`, `street`, `number`, `city`, `country`, `id_users`) VALUES (:id,:street,:number,:city,:country,:id_users)";
+        $query = "INSERT INTO `rtcb_adress_users`(`street`, `number`, `city`, `country`, `id_users`) VALUES (:street,:number,:city,:country,:id_users)";
 
         $queryExecute = $this->db->prepare($query);
-        $queryExecute->bindValue(':street', $this->street, PDO::PARAM_BOOL);
+        $queryExecute->bindValue(':street', $this->street, PDO::PARAM_STR);
         $queryExecute->bindValue(':number', $this->number, PDO::PARAM_INT);
         $queryExecute->bindValue(':city', $this->city, PDO::PARAM_STR);
         $queryExecute->bindValue(':country', $this->country, PDO::PARAM_STR);
         $queryExecute->bindValue(':id_users', $this->id_users, PDO::PARAM_INT);
         return $queryExecute->execute();
+    }
+
+    public function getById()
+    {
+        $query = "SELECT * FROM `rtcb_adress_users` WHERE `id` = :id";
+
+        $queryExecute = $this->db->prepare($query);
+        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $queryExecute->execute();
+        return $queryExecute->fetch(PDO::FETCH_OBJ);
     }
 
 

@@ -112,7 +112,7 @@ if (!empty($_POST) && !empty($_POST['type'])) {
                     $error['server'] = 'enregistrement reussie mais echec de la connexion';
                 }
             } else {
-                $error['server'] = 'Enregistrement échoué, réessayer plus tard';
+                $error['server'] = 'Enregistrement échoué, réessayez plus tard';
             }
         }
     } elseif ($_POST['type'] == 'login') {

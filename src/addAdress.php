@@ -1,4 +1,4 @@
-<?php require_once 'controllers/adressCtrl.php'  ?>
+<?php require_once 'controllers/addAdressCtrl.php'  ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -48,25 +48,70 @@
         </ul>
 
         <div class="adressAccount">
-            <div class="adressCard">
-                <div class="headCard">
-                    <div class="adressTitle">
-                        <h1 class="adress">Adresse :</h1>
-                    </div>
-                    <a href="">
-                        <ion-icon class="pen" name="pencil-outline"></ion-icon>
-                    </a>
-                    <p><?= var_dump($adressData) ?></p>
+            <form method="POST">
+                <h1 class="addAdress">Enregistrer votre adresse de livraison :</h1>
+                <div>
+                    <input value="<?= !empty($_POST['street']) ? $_POST['street'] : '' ?> " class="inputBox" type="text" name="street" id="street" placeholder="Rue" required />
+                    <?php if (!empty($error) && !empty($error['street'])) { ?>
+                        <small style="color: red;"><?= $error['street'] ?></small>
+                    <?php } ?>
                 </div>
-            </div>
-            <div class="addAdressCard">
-                <a href="addAdress.php">
-                    <ion-icon class="add" name="add-outline"></ion-icon>
-                </a>
-            </div>
+
+                <div>
+                    <input value="<?= !empty($_POST['number']) ? $_POST['number'] : '' ?>" class="inputBox" type="number" name="number" id="number" placeholder="Numero de rue" required>
+                    <?php if (!empty($error) && !empty($error['number'])) { ?>
+                        <small style="color: red;"><?= $error['number'] ?></small>
+                    <?php } ?>
+                </div>
+
+                <div>
+                    <input value="<?= !empty($_POST['city']) ? $_POST['city'] : '' ?>" class="inputBox" type="text" name="city" id="city" placeholder="Code postal et Ville" required>
+                    <?php if (!empty($error) && !empty($error['city'])) { ?>
+                        <small style="color: red;"><?= $error['city'] ?></small>
+                    <?php } ?>
+                </div>
+
+                <div>
+                    <input value="<?= !empty($_POST['country']) ? $_POST['country'] : '' ?> " class="inputBox" type="text" name="country" id="country" placeholder="Pays" required />
+                    <?php if (!empty($error) && !empty($error['country'])) { ?>
+                        <small style="color: red;"><?= $error['country'] ?></small>
+                    <?php } ?>
+                </div>
+                <button class="custom" name="type" value="create">ENREGISTRER MON ADRESSE</button>
+        </div>
+        </form>
         </div>
 
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="assets/js/script.js"></script>
