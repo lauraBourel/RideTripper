@@ -26,38 +26,11 @@ class Adress extends Database
 
     public function getById()
     {
-        $query = "SELECT * FROM `rtcb_adress_users` WHERE `id` = :id";
+        $query = "SELECT * FROM `rtcb_adress_users` WHERE `id_users` = :id";
 
         $queryExecute = $this->db->prepare($query);
-        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_INT);
+        $queryExecute->bindValue(':id', $this->id_users, PDO::PARAM_INT);
         $queryExecute->execute();
-        return $queryExecute->fetch(PDO::FETCH_OBJ);
+        return $queryExecute->fetchAll(PDO::FETCH_OBJ);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

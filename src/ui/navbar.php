@@ -41,13 +41,3 @@
         <button id="cart-close" class="custom">RETOUR A LA BOUTIQUE</button>
     </div>
 </nav>
-
-<script>
-    const test = document.getElementById('cat1');
-    console.log(test);
-
-    test.addEventListener('click', () => {
-        console.log('test');
-
-    });
-</script>

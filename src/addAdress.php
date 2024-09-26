@@ -49,9 +49,16 @@
 
         <div class="adressAccount">
             <form method="POST">
-                <h1 class="addAdress">Enregistrer votre adresse de livraison :</h1>
+                <div class="headBox">
+                    <div class="titleAddAdress">
+                        <h1 class="addAdress">Enregistrer votre adresse de livraison :</h1>
+                    </div>
+                    <div class="backArrow">
+                        <a href="adress.php "><ion-icon name="arrow-back-outline"></ion-icon></a>
+                    </div>
+                </div>
                 <div>
-                    <input value="<?= !empty($_POST['street']) ? $_POST['street'] : '' ?> " class="inputBox" type="text" name="street" id="street" placeholder="Rue" required />
+                    <input value="<?= !empty($_POST['street']) ? $_POST['street'] : '' ?>" class="inputBox" type="text" name="street" id="street" placeholder="Rue" required />
                     <?php if (!empty($error) && !empty($error['street'])) { ?>
                         <small style="color: red;"><?= $error['street'] ?></small>
                     <?php } ?>
@@ -72,7 +79,7 @@
                 </div>
 
                 <div>
-                    <input value="<?= !empty($_POST['country']) ? $_POST['country'] : '' ?> " class="inputBox" type="text" name="country" id="country" placeholder="Pays" required />
+                    <input value="<?= !empty($_POST['country']) ? $_POST['country'] : '' ?>" class="inputBox" type="text" name="country" id="country" placeholder="Pays" required />
                     <?php if (!empty($error) && !empty($error['country'])) { ?>
                         <small style="color: red;"><?= $error['country'] ?></small>
                     <?php } ?>

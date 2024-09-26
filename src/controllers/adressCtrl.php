@@ -7,8 +7,4 @@ require_once 'models/Adress.php';
 
 $adressUser = new Adress();
 $adressUser->id_users = $_SESSION['id'];
-$adressData = $adressUser->getById();
-
-
-
-
+$adressDatas = $adressUser->getById();

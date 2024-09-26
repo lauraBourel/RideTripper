@@ -34,7 +34,7 @@
             <?php } ?>
         </div>
     </main>
-
+    <?php require './ui/footer.php' ?>
 
 
 

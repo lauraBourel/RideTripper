@@ -48,17 +48,22 @@
         </ul>
 
         <div class="adressAccount">
-            <div class="adressCard">
-                <div class="headCard">
-                    <div class="adressTitle">
-                        <h1 class="adress">Adresse :</h1>
+            <?php foreach ($adressDatas as $adressData) { ?>
+                <div class="adressCard">
+                    <div class="headCard">
+                        <div class="adressTitle">
+                            <h1 class="adress">Adresse :</h1>
+                        </div>
+                        <a href="">
+                            <ion-icon class="pen" name="pencil-outline"></ion-icon>
+                        </a>
                     </div>
-                    <a href="">
-                        <ion-icon class="pen" name="pencil-outline"></ion-icon>
-                    </a>
-                    <p><?= var_dump($adressData) ?></p>
+                    <p><?= $adressData->number?></p>
+                    <p><?= $adressData->street?></p>
+                    <p><?= $adressData->city?></p>
+                    <p><?= $adressData->country?></p>
                 </div>
-            </div>
+            <?php } ?>
             <div class="addAdressCard">
                 <a href="addAdress.php">
                     <ion-icon class="add" name="add-outline"></ion-icon>
