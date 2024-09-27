@@ -1,3 +1,4 @@
+<?php require_once 'controllers/itemCtrl.php'  ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,7 +14,9 @@
     <?php require './ui/navbar.php' ?>
     <main>
     <div class="itemImg"></div>
-    <div class="itemDetails"></div>
+    <div class="itemDetails">
+        <?= var_dump($oneItemData)?>
+    </div>
     </main>
     <?php require './ui/footer.php' ?>
 

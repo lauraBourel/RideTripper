@@ -15,19 +15,21 @@
     <?php require './ui/navbar.php' ?>
     <main>
 
-    <!-- Display Category Name -->
+        <!-- Display Category Name -->
         <h1><?= $cat->name ?></h1>
 
-    <!-- Display Items with Details  -->
+        <!-- Display Items with Details  -->
         <div class="itemsBox">
             <?php if ($dataItem) { ?>
                 <?php foreach ($dataItem as $item) { ?>
-                    <div class="itemCard">
-                        <img class="itemImg" src="\assets\img\gants.jpg" alt="Gants moto">
-                        <div class="itemCardDescription"><?= $item->name ?>
-                            <div class="price"><?= $item->price ?>€</div>
+                    <a href="item.php">
+                        <div class="itemCard">
+                            <img class="itemImg" src="\assets\img\gants.jpg" alt="Gants moto">
+                            <div class="itemCardDescription"><?= $item->name ?>
+                                <div class="price"><?= $item->price ?>€</div>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 <?php } ?>
             <?php } else { ?>
                 <h2>Aucun article dans cette categorie</h2>
