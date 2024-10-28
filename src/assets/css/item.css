@@ -1,5 +1,6 @@
 body {
-    background-color: rgb(146, 63, 89);
+    background: rgb(190,186,255);
+    background: linear-gradient(90deg, rgba(190,186,255,1) 0%, rgba(48,208,161,1) 71%, rgba(197,245,255,1) 94%); 
 }
 
 main {
@@ -15,14 +16,14 @@ main .itemImg{
     width: 20rem;
     height: 25rem;
     margin: 1rem;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
 }
 
 main .itemDetails{
     width: 20rem;
     height: 25rem;
     margin: 1rem;
-    background-color: rgb(52, 61, 145);
+    background-color: rgb(255, 255, 255);
 }
 
 

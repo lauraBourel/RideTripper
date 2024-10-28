@@ -1,5 +1,9 @@
 body {
-    background-color: rgb(184, 96, 169);
+    background: rgb(190,186,255);
+    background: linear-gradient(90deg, rgba(190,186,255,1) 0%, rgba(48,208,161,1) 71%, rgba(197,245,255,1) 94%); 
+    /* rgb(120, 152, 145); */
+    /* rgba(187, 66, 237, 0.58); */
+    /* rgb(184, 96, 169); */
 }
 
 main {

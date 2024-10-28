@@ -21,7 +21,7 @@
             <button class="custom">VOIR</button>
         </div>
     </main>
-    <?php require './ui/footer.php' ?>
+    <!-- <?php require './ui/footer.php' ?> -->
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

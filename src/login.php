@@ -44,6 +44,8 @@
             <button class="btnLog" name="type" type="submit" value="login">CONNEXION</button>
         </form>
 
+
+        
         <form method="POST" class="register">
             <div class="registerInfo">
             <p class="txtRegister">S'enregistrer :</p>

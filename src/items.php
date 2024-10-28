@@ -22,7 +22,7 @@
         <div class="itemsBox">
             <?php if ($dataItem) { ?>
                 <?php foreach ($dataItem as $item) { ?>
-                    <a href="item.php">
+                    <a href="item.php?id=<?= $item->id ?>">
                         <div class="itemCard">
                             <img class="itemImg" src="\assets\img\gants.jpg" alt="Gants moto">
                             <div class="itemCardDescription"><?= $item->name ?>

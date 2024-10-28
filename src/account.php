@@ -41,6 +41,12 @@
                 </a>
             </li>
             <li>
+                <a href="addItem.php" title="Ajout d'articles">
+                    <span class="linkAccount">Ajout d'articles</span>
+                    <ion-icon class="accountLogo" name="settings-outline"></ion-icon>
+                </a>
+            </li>
+            <li>
                 <a href="logout.php" title="Deconnexion">
                     <span class="linkAccount">Deconnexion</span>
                     <ion-icon class="accountLogo" name="power-outline"></ion-icon>
@@ -50,7 +56,7 @@
         <div class="descriptionAccount">
             <h1>Bonjour <?=  $dataUser->firstname ?>,</h1>
             <p> À partir du tableau de bord de votre compte,
-                vous pouvez visualiser vos commandes récetentes,<br>
+                vous pouvez visualiser vos commandes récentes,<br>
                 gérer vos adresses de livraison et de facturation
                 ainsi que changer votre mot de passe
                 et les détails de votre compte.</p>
