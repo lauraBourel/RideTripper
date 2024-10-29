@@ -13,10 +13,34 @@
 <body>
     <?php require './ui/navbar.php' ?>
     <main>
-    <div class="itemImg"></div>
-    <div class="itemDetails">
-        <?= var_dump($oneItemData)?>
-    </div>
+        <h1><?= $oneItemData->name ?></h1>
+        <div class="sectionItem">
+            <section>
+                <img class="itemImg" src="\assets\img\gants.jpg" alt="Gants moto">
+            </section>
+            <section class="itemDetails">
+                <div class="updateItem">
+                    <a href="updateItem.php">
+                        <ion-icon name="build-outline"></ion-icon>
+                    </a>
+                </div>
+                <div class="itemDescription">
+                    <?= $oneItemData->description ?>
+                    <div class="itemPrice"><?= $oneItemData->price ?>€</div>
+                    <div>
+                        <input type="button" value="-">
+                        <input type="number" name="quantity" value="1" aria-label="Quantité de produits" size="4" min="1" max="7" step="1" placeholder="" inputmode="numeric" autocomplete="off">
+                        <input type="button" value="+">
+                    </div>
+                    <button class="custom secondary" name="type">AJOUTER AU PANIER</button>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
     </main>
     <?php require './ui/footer.php' ?>
 

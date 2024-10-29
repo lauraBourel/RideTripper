@@ -28,7 +28,7 @@
 
                 <div class="descriptionBox">
                     <textarea
-                    <?= !empty($_POST['description']) ? $_POST['description'] : '' ?> class="inputDescription" type="text" name="description" id="description" placeholder="Description article" required >
+                    <?= !empty($_POST['description']) ? $_POST['description'] : '' ?> class="inputDescription" type="text" name="description" id="description" placeholder="Description article" required>
                     </textarea>
                     <?php if (!empty($error) && !empty($error['description'])) { ?>
                         <small style="color: red;"><?= $error['description'] ?></small>

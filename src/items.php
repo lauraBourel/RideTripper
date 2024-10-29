@@ -25,6 +25,7 @@
                     <a href="item.php?id=<?= $item->id ?>">
                         <div class="itemCard">
                             <img class="itemImg" src="\assets\img\gants.jpg" alt="Gants moto">
+                            </img>
                             <div class="itemCardDescription"><?= $item->name ?>
                                 <div class="price"><?= $item->price ?>€</div>
                             </div>
