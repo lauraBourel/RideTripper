@@ -81,3 +81,31 @@ window.addEventListener('scroll', () => {
     searchBox.classList.remove('active');
     cart.classList.remove('open');
 });
+
+
+// modal
+
+const closeModal = document.getElementsByClassName('closeModal');
+const openModal = document.getElementsByClassName('openModal');
+
+for (let i = 0; i < closeModal.length; i++) {
+    closeModal[i].addEventListener('click', () => {
+        const target = closeModal[i].getAttribute('target-modal');
+        const modal = document.getElementById(target);
+        modal.classList.remove('animate')
+        setTimeout(() => {
+            modal.classList.remove('open');
+        }, 500);
+    });
+}
+
+for (let i = 0; i < openModal.length; i++) {
+    openModal[i].addEventListener('click', () => {
+        const target = openModal[i].getAttribute('target-modal');
+        const modal = document.getElementById(target);
+        modal.classList.add('open');
+        setTimeout(() => {
+            modal.classList.add('animate')
+        }, 5);
+    });
+}

@@ -88,7 +88,7 @@ if (!empty($_POST) && !empty($_POST['type'])) {
                     if (strtotime($_POST['birthday']) < strtotime('now')) {
                         $user->birthday = htmlspecialchars($_POST['birthday']);
                     } else {
-                        $error['birthday'] = 'Trop jeune';
+                        $error['birthday'] = 'Vous êtes trop jeune';
                     }
                 } else {
                     $error['birthday'] = 'Format AAAA-MM-JJ';

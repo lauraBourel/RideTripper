@@ -1,6 +1,6 @@
 body {
-    background: rgb(190,186,255);
-    background: linear-gradient(90deg, rgba(190,186,255,1) 0%, rgba(48,208,161,1) 71%, rgba(197,245,255,1) 94%); 
+    background: rgb(190, 186, 255);
+    background: linear-gradient(90deg, rgba(190, 186, 255, 1) 0%, rgba(48, 208, 161, 1) 71%, rgba(197, 245, 255, 1) 94%);
 }
 
 main {
@@ -24,12 +24,12 @@ main .itemsBox {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem;
 }
 
 main .itemCard {
     width: 13rem;
     height: 17rem;
-    margin: 1rem;
     transition: box-shadow .3s;
     display: flex;
     flex-direction: column;

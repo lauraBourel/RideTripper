@@ -19,10 +19,10 @@ if (!empty($_POST) && !empty($_POST['type'])) {
         }
 
         if (!empty($_POST['description'])) {
-            if (strlen($_POST['description']) <= 255) {
+            if (strlen($_POST['description']) <= 1500) {
                 $item->description = htmlspecialchars($_POST['description']);
             } else {
-                $error['description'] = '255 caracteres maximum';
+                $error['description'] = '1500 caracteres maximum';
             }
         } else {
             $error['description'] = 'Description du produit obligatoire';

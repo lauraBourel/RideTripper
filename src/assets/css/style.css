@@ -6,7 +6,7 @@
 body {
     min-height: calc(100vh - 3.5rem);
     margin: 0;
-    margin-top: 3.5rem;
+    padding-top: 3.5rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -20,7 +20,8 @@ a {
     text-decoration: none;
 }
 
-button.custom {
+button.custom,
+a.custom {
     padding: .5rem 1rem;
     margin: 1rem;
     position: relative;
@@ -36,21 +37,26 @@ button.custom {
     transition: .5s;
 }
 
-button.custom.secondary {
+button.custom.secondary,
+a.custom.secondary {
     color: var(--text-color);
     border: 1px solid black;
 }
 
-button.custom:hover {
+button.custom:hover,
+a.custom:hover {
     color: var(--text-color);
 }
 
-button.custom.secondary:hover {
+button.custom.secondary:hover,
+a.custom.secondary:hover {
     color: black;
 }
 
 button.custom::before,
-button.custom::after {
+button.custom::after,
+a.custom::before,
+a.custom::after {
     content: '';
     height: 100%;
     width: 51%;
@@ -62,20 +68,26 @@ button.custom::after {
 }
 
 button.custom.secondary::before,
-button.custom.secondary::after {
+button.custom.secondary::after,
+a.custom.secondary::before,
+a.custom.secondary::after {
     background: black;
 }
 
-button.custom::before {
+button.custom::before,
+a.custom::before {
     left: 0;
 }
 
-button.custom::after {
+button.custom::after,
+a.custom::after {
     right: 0;
 }
 
 button.custom:hover::before,
-button.custom:hover::after {
+button.custom:hover::after,
+a.custom:hover::before,
+a.custom:hover::after {
     width: 0%;
 }
 
@@ -361,7 +373,7 @@ nav #cart.empty ion-icon {
 
 /* Footer */
 
-.footerBox{
+.footerBox {
     width: 100%;
     height: 4rem;
     display: flex;
@@ -372,13 +384,107 @@ nav #cart.empty ion-icon {
     background-color: var(--bg);
 }
 
+/* Modal */
 
+.modal {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    display: none;
+    transition: .5s;
+}
 
+.modal.open {
+    display: block;
+}
 
+.modal.animate {
+    background: rgba(0, 0, 0, 0.18);
+}
 
+.modal .close-bg {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+}
 
+.modal .close {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 1.2rem;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    color: var(--text-color);
+    background: none;
+    cursor: pointer;
+}
 
+.modal>div {
+    width: 40rem;
+    max-width: 98%;
+    height: 20rem;
+    max-height: 98%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.6);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+    background: var(--bg);
+    box-shadow: 0 0 41px 0 rgba(0, 0, 0, 0.517);
+    transition: .5s;
+}
 
+.modal.animate>div {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.modal h2 {
+    margin: .5rem;
+}
+
+.modal__content {
+    flex: 1;
+    width: calc(100% - 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.modal .action {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal .action button,
+.modal .action a {
+    margin: .5rem;
+    margin-left: 0;
+}
 
 
 

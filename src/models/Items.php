@@ -65,4 +65,26 @@ class Item extends Database
         $queryExecute->execute();
         return $queryExecute->fetch(PDO::FETCH_OBJ);
     }
+
+    public function update()
+    {
+        $query = "UPDATE `rtcb_items` SET `name` = :name,`description`= :description,`price`= :price,`quantity`= :quantity,`id_subcategory`= :id_subcategory WHERE `id` = :id";
+
+        $queryExecute = $this->db->prepare($query);
+        $queryExecute->bindValue(':name', $this->name, PDO::PARAM_STR);
+        $queryExecute->bindValue(':description', $this->description, PDO::PARAM_STR);
+        $queryExecute->bindValue(':price', $this->price, PDO::PARAM_STR);
+        $queryExecute->bindValue(':quantity', $this->quantity, PDO::PARAM_STR);
+        $queryExecute->bindValue(':id_subcategory', $this->id_subcategory, PDO::PARAM_STR);
+        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_STR);
+        return $queryExecute->execute(); 
+    }
+
+    public function delete()
+    {
+        $query = "DELETE FROM `rtcb_items` WHERE `id` = :id;";
+        $queryExecute = $this->db->prepare($query);
+        $queryExecute->bindValue(':id', $this->id, PDO::PARAM_INT);
+        return    $queryExecute->execute();
+    }
 }

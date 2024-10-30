@@ -20,8 +20,11 @@
             </section>
             <section class="itemDetails">
                 <div class="updateItem">
-                    <a href="updateItem.php">
-                        <ion-icon name="build-outline"></ion-icon>
+                    <a class="openModal" target-modal="delete">
+                        <ion-icon class="updateIcon" name="trash-outline"></ion-icon>
+                    </a>
+                    <a href="updateItem.php?id=<?= $oneItemData->id ?>">
+                        <ion-icon class="updateIcon" name="build-outline"></ion-icon>
                     </a>
                 </div>
                 <div class="itemDescription">
@@ -36,13 +39,26 @@
                 </div>
             </section>
         </div>
-
-
-
-
-
     </main>
-    <?php require './ui/footer.php' ?>
+
+
+    <?php
+    $idModal = 'delete';
+    $title = 'Voulez vous supprimez ?';
+
+    ob_start(); ?>
+    <p>Cette suppression est definitif</p>
+    <?php $content = ob_get_clean();
+
+    ob_start(); ?>
+    <button class="custom primary closeModal" target-modal="<?= $idModal ?>">Annuler</button>
+    <a href="deletItem.php?id=<?= $oneItemData->id ?>" class="custom secondary">Valider</a>
+    <?php
+    $actions = ob_get_clean();
+
+    require './ui/modal.php';
+    require './ui/footer.php';
+    ?>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

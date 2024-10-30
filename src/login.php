@@ -51,12 +51,12 @@
             <p class="txtRegister">S'enregistrer :</p>
             <div class="civility">
                 <label for="mister">
-                    <input <?= !empty($_POST['civility']) ? $_POST['civility'] : '' ?> type="radio" id="mister" name="civility" value="0" />
+                    <input value="<?= !empty($_POST['civility']) ? $_POST['civility'] : '' ?>" type="radio" id="mister" name="civility" value="0" />
                     M
                 </label>
 
                 <label for="miss">
-                    <input <?= !empty($_POST['civility']) ? $_POST['civility'] : '' ?> type="radio" id="miss" name="civility" value="1" />
+                    <input value="<?= !empty($_POST['civility']) ? $_POST['civility'] : '' ?>" type="radio" id="miss" name="civility" value="1" />
                     Mme
                 </label>
                 <?php if (!empty($error) && !empty($error['civility'])) { ?>
@@ -66,13 +66,13 @@
 
             <div class="nameBox">
 
-                <input <?= !empty($_POST['lastname']) ? $_POST['lastname'] : '' ?> class="inputName" type="text" name="lastname" id="lastname" placeholder="Nom" required />
+                <input value="<?= !empty($_POST['lastname']) ? $_POST['lastname'] : '' ?>" class="inputName" type="text" name="lastname" id="lastname" placeholder="Nom" required />
                 <?php if (!empty($error) && !empty($error['lastname'])) { ?>
                     <small style="color: red;"><?= $error['lastname'] ?></small>
                 <?php } ?>
 
 
-                <input <?= !empty($_POST['firstname']) ? $_POST['firstname'] : '' ?> class="inputName" type="text" name="firstname" id="firstname" placeholder="Prénom" required>
+                <input value="<?= !empty($_POST['firstname']) ? $_POST['firstname'] : '' ?>" class="inputName" type="text" name="firstname" id="firstname" placeholder="Prénom" required>
                 <?php if (!empty($error) && !empty($error['firstname'])) { ?>
                     <small style="color: red;"><?= $error['firstname'] ?></small>
                 <?php } ?>
@@ -110,7 +110,7 @@
                 <div class="iconBox">
                     <ion-icon class="iconPhone" name="call-outline"></ion-icon>
                 </div>
-                <input <?= !empty($_POST['phone_number']) ? $_POST['phone_number'] : '' ?> class="inputRegister" type="text" name="phone_number" id="phone" placeholder="Mobile" required />
+                <input value="<?= !empty($_POST['phone_number']) ? $_POST['phone_number'] : '' ?>" class="inputRegister" type="text" name="phone_number" id="phone" placeholder="Mobile" required />
                 <?php if (!empty($error) && !empty($error['phone_number'])) { ?>
                     <small style="color: red;"><?= $error['phone_number'] ?></small>
                 <?php } ?>
