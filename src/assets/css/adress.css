@@ -108,6 +108,11 @@ form {
     font-weight: normal;
 }
 
+ul {
+    margin-right: 2.5rem;
+    list-style-type: none;
+}
+
 .pen {
     margin: 1rem;
     color: white;

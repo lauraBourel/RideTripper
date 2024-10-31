@@ -18,7 +18,7 @@
         <div class="middle">
             <p>VESTE MOTO FEMME EN CUIR</p>
             <p>HOMOLOGUEE AA - RISE</p>
-            <button class="custom">VOIR</button>
+            <a href="item.php?id=3"class="custom">VOIR</a>
         </div>
     </main>
     <!-- <?php require './ui/footer.php' ?> -->

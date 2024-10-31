@@ -11,7 +11,9 @@
 </head>
 
 <body>
+    <!-- Display Navbar -->
     <?php require_once './ui/navbar.php' ?>
+    <!-- Main section containing the account menu -->
     <main class="midBox">
         <ul class="accountMenu">
             <li>
@@ -53,37 +55,44 @@
                     <div class="titleAddAdress">
                         <h1 class="addAdress">Enregistrer votre adresse de livraison :</h1>
                     </div>
+                    <!-- Back arrow to return to the previous page -->
                     <div class="backArrow">
                         <a href="adress.php "><ion-icon name="arrow-back-outline"></ion-icon></a>
                     </div>
                 </div>
+                <!-- Input for street address -->
                 <div>
                     <input value="<?= !empty($_POST['street']) ? $_POST['street'] : '' ?>" class="inputBox" type="text" name="street" id="street" placeholder="Rue" required />
+                    <!-- Display error message if street address is invalid -->
                     <?php if (!empty($error) && !empty($error['street'])) { ?>
                         <small style="color: red;"><?= $error['street'] ?></small>
                     <?php } ?>
                 </div>
-
+                <!-- Input for number address -->
                 <div>
                     <input value="<?= !empty($_POST['number']) ? $_POST['number'] : '' ?>" class="inputBox" type="number" name="number" id="number" placeholder="Numero de rue" required>
+                    <!-- Display error message if number address is invalid -->
                     <?php if (!empty($error) && !empty($error['number'])) { ?>
                         <small style="color: red;"><?= $error['number'] ?></small>
                     <?php } ?>
                 </div>
-
+                <!-- Input for city address -->
                 <div>
                     <input value="<?= !empty($_POST['city']) ? $_POST['city'] : '' ?>" class="inputBox" type="text" name="city" id="city" placeholder="Code postal et Ville" required>
+                    <!-- Display error message if city address is invalid -->
                     <?php if (!empty($error) && !empty($error['city'])) { ?>
                         <small style="color: red;"><?= $error['city'] ?></small>
                     <?php } ?>
                 </div>
-
+                <!-- Input for country address -->
                 <div>
                     <input value="<?= !empty($_POST['country']) ? $_POST['country'] : '' ?>" class="inputBox" type="text" name="country" id="country" placeholder="Pays" required />
+                    <!-- Display error message if country address is invalid -->
                     <?php if (!empty($error) && !empty($error['country'])) { ?>
                         <small style="color: red;"><?= $error['country'] ?></small>
                     <?php } ?>
                 </div>
+                <!-- Register adress button  -->
                 <button class="custom" name="type" value="create">ENREGISTRER MON ADRESSE</button>
         </div>
         </form>

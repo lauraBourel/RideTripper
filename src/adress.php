@@ -11,7 +11,9 @@
 </head>
 
 <body>
+    <!-- Display Navbar -->
     <?php require_once './ui/navbar.php' ?>
+    <!-- Main section containing the account menu -->
     <main class="midBox">
         <ul class="accountMenu">
             <li>
@@ -46,8 +48,9 @@
                 </a>
             </li>
         </ul>
-
+        <!-- Section for displaying addresses -->
         <div class="adressAccount">
+            <!-- Loop through each address in adressDatas -->
             <?php foreach ($adressDatas as $adressData) { ?>
                 <div class="adressCard">
                     <div class="headCard">
@@ -58,12 +61,16 @@
                             <ion-icon class="pen" name="pencil-outline"></ion-icon>
                         </a>
                     </div>
-                    <p><?= $adressData->number?></p>
-                    <p><?= $adressData->street?></p>
-                    <p><?= $adressData->city?></p>
-                    <p><?= $adressData->country?></p>
+                    <!-- Display address details -->
+                    <ul>
+                    <li><?= $adressData->number ?></li>
+                    <li><?= $adressData->street ?></li>
+                    <li><?= $adressData->city ?></li>
+                    <li><?= $adressData->country ?></li>
+                    </ul>
                 </div>
             <?php } ?>
+            <!-- Card for adding a new address -->
             <div class="addAdressCard">
                 <a href="addAdress.php">
                     <ion-icon class="add" name="add-outline"></ion-icon>

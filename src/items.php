@@ -18,9 +18,11 @@
         <!-- Display Category Name -->
         <h1><?= $cat->name ?></h1>
 
-        <!-- Display Items with Details  -->
+        <!-- Display Items  -->
         <div class="itemsBox">
+            <!-- Check if there are any items in dataItem -->
             <?php if ($dataItem) { ?>
+                <!-- Loop through each item in dataItem -->
                 <?php foreach ($dataItem as $item) { ?>
                     <a href="item.php?id=<?= $item->id ?>">
                         <div class="itemCard">
@@ -33,10 +35,12 @@
                     </a>
                 <?php } ?>
             <?php } else { ?>
+                <!-- Message if there are no items in the category -->
                 <h2>Aucun article dans cette categorie</h2>
             <?php } ?>
         </div>
     </main>
+    <!-- Display Footer -->
     <?php require './ui/footer.php' ?>
 
 

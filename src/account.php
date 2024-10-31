@@ -11,7 +11,9 @@
 </head>
 
 <body>
+    <!-- Display Navbar -->
     <?php require_once './ui/navbar.php' ?>
+    <!-- Main section containing the account menu -->
     <main class="midBox">
         <ul class="accountMenu">
             <li>

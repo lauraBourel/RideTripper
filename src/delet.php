@@ -12,6 +12,7 @@
 
     <h1><?= $message ?></h1>
     <script>
+        //  Redirect to the homepage after 10 seconds
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 document.location.href = "/";
